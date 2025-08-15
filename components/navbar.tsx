@@ -15,6 +15,9 @@ import {
 
 import { cn } from "@/lib/utils";
 import { ThemeSwitcher } from "./theme-switcher";
+import { Button } from "./ui/button";
+import { Calendar, Hamburger } from "lucide-react";
+import GetInTouchButton from "./contact-button";
 
 const aboutItems = [
   {
@@ -108,12 +111,12 @@ export default function Navbar() {
   return (
     <>
       {/* Navigation Menu */}
-      <NavigationMenu className="z-50 xs:hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
+      <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
         <div className="text-xl font-heading font-bold text-text">PixleSmith</div>
         <NavigationMenuList>
           {/* Home */}
           <NavigationMenuItem>
-            <Link href="/" passHref>
+            <Link href="/" passHref legacyBehavior>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Home
               </NavigationMenuLink>
@@ -126,10 +129,9 @@ export default function Navbar() {
             <NavigationMenuContent>
               <ul className="grid w-[500px] gap-3 p-2 lg:grid-cols-[.75fr_1fr]">
                 <li className="row-span-3">
-                     <Link href="/about" passHref>
-
                   <NavigationMenuLink asChild>
-                    <div
+                    <Link
+                      href="/about"
                       className="flex h-full w-full select-none flex-col justify-end rounded-base p-6 no-underline outline-hidden border-2 border-border bg-secondary"
                     >
                       <div className="mb-2 mt-4 text-lg font-heading text-foreground">
@@ -139,9 +141,8 @@ export default function Navbar() {
                         Discover who we are, what we believe in, and how we're
                         making a difference in the world.
                       </p>
-                    </div>
+                    </Link>
                   </NavigationMenuLink>
-                  </Link>
                 </li>
                 <ListItem href="/about/story" title="Our Story">
                   Learn about our journey and mission.
@@ -176,14 +177,21 @@ export default function Navbar() {
 
           {/* Contact Us */}
           <NavigationMenuItem>
-            <Link href="/contact" passHref>
+            <Link href="/contact" passHref legacyBehavior>
               <NavigationMenuLink className={navigationMenuTriggerStyle()}>
                 Contact Us
               </NavigationMenuLink>
             </Link>
           </NavigationMenuItem>
         </NavigationMenuList>
-        <ThemeSwitcher />
+        <div>
+          <GetInTouchButton 
+            text={"Schedule a Call"} 
+            icon={<Calendar />}
+            className="mr-3"
+          />
+          <ThemeSwitcher />
+        </div>
       </NavigationMenu>
 
       {/* Mobile Navigation */}
@@ -194,12 +202,12 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
-            <button
+            <Button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 text-foreground"
-            >
-              ☰
-            </button>
+              className="p-2"
+              >
+              <Hamburger />
+            </Button>
           </div>
         </div>
 
