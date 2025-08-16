@@ -193,3 +193,32 @@
     @apply font-heading;
   }
 }
+::-webkit-scrollbar {
+    width: 20px;
+    height: 20px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--secondary-background);
+    border-left: 4px solid var(--border);
+    border-right: 4px solid var(--border);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--border);
+    border: 2px solid var(--border) ;
+    border-radius: 0;
+  }
+
+
+  /* Dark mode specific adjustments */
+  .dark ::-webkit-scrollbar-track {
+    background: var(--secondary-background);
+    border-left: 4px solid var(--ring);
+    border-right: 4px solid var(--ring);
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    background: var(--ring);
+    border: 2px solid var(--border);
+  }
