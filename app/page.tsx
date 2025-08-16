@@ -18,7 +18,7 @@ const Home = () => {
              max-w-4xl mx-auto text-balance"
             >
               From Vision Through{" "}
-              <MovingBorderStyle borderRadius="10px" className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full;">PixelSmith</MovingBorderStyle>
+              <MovingBorderStyle borderRadius="10px" className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full capitalize">PixelSmith</MovingBorderStyle>
               {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
                 PixelSmith
               </span>{" "} */}
