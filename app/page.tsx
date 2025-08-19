@@ -14,6 +14,7 @@ import {
 } from "lucide-react";
 import ServicesCard from "@/components/services-card";
 import ProcessSection from "@/components/process-timeline";
+import Clientele from "@/components/clientel";
 
 const Home = () => {
   const services = [
@@ -31,28 +32,6 @@ const Home = () => {
       icon: <Smartphone className="inline" />,
       title: "Web & Mobile Apps",
       description: "Engaging apps that perform across devices.",
-    },
-  ];
-  const processSteps = [
-    {
-      title: "Idea",
-      icon: Lightbulb,
-      description:
-        "We start by understanding your goals and brainstorming solutions.",
-      color: "bg-yellow-200 border-yellow-500 text-foreground",
-    },
-    {
-      title: "Design",
-      icon: Palette,
-      description: "We craft intuitive designs and seamless user experiences.",
-      color: "bg-pink-200 border-pink-500",
-    },
-    {
-      title: "Launch",
-      icon: Rocket,
-      description:
-        "We build, test, and launch your product with performance in mind.",
-      color: "bg-green-200 border-green-500",
     },
   ];
   return (
@@ -92,7 +71,7 @@ const Home = () => {
         </section>
       </Container>
       {/* Services Section */}
-      <div className="py-16 bg-secondary border-border border-t-4">
+      <section className="py-16 bg-secondary border-border border-t-4">
         <Container>
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold">Our Services</h2>
@@ -111,10 +90,25 @@ const Home = () => {
             ))}
           </div>
         </Container>
-      </div>
+      </section>
 
       {/* Process Section */}
-      <ProcessSection />
+      <section>
+        <ProcessSection />
+      </section>
+
+      {/* Showcase section */}
+      <section className="py-16 bg-secondary border-border border-t-4">
+        <Container className="text-center">
+          <h2 className="text-3xl font-bold">REAL WORK. REAL BRANDS.</h2>
+          <p className="text-muted-foreground mt-2">
+            From startups to growing businesses — here are some we&apos;ve partnered with.
+          </p>
+        </Container>
+        {/* <Container> */}
+        <Clientele />
+        {/* </Container> */}
+      </section>
     </>
   );
 };
