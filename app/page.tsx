@@ -2,16 +2,7 @@
 import GetInTouchButton from "@/components/contact-button";
 import { Container } from "@/components/container";
 import { MovingBorderStyle } from "@/components/moving-border";
-import { motion } from "framer-motion";
-import {
-  ArrowUpRight,
-  Layers,
-  Monitor,
-  Smartphone,
-  Lightbulb,
-  Palette,
-  Rocket,
-} from "lucide-react";
+import { ArrowUpRight, Layers, Monitor, Smartphone } from "lucide-react";
 import ServicesCard from "@/components/services-card";
 import ProcessSection from "@/components/process-timeline";
 import Clientele from "@/components/clientel";
@@ -102,7 +93,8 @@ const Home = () => {
         <Container className="text-center">
           <h2 className="text-3xl font-bold">REAL WORK. REAL BRANDS.</h2>
           <p className="text-muted-foreground mt-2">
-            From startups to growing businesses — here are some we&apos;ve partnered with.
+            From startups to growing businesses — here are some we&apos;ve
+            partnered with.
           </p>
         </Container>
         {/* <Container> */}
