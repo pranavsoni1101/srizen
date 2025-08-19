@@ -3,8 +3,17 @@ import GetInTouchButton from "@/components/contact-button";
 import { Container } from "@/components/container";
 import { MovingBorderStyle } from "@/components/moving-border";
 import { motion } from "framer-motion";
-import { ArrowUpRight, Layers, Monitor, Smartphone } from "lucide-react";
+import {
+  ArrowUpRight,
+  Layers,
+  Monitor,
+  Smartphone,
+  Lightbulb,
+  Palette,
+  Rocket,
+} from "lucide-react";
 import ServicesCard from "@/components/services-card";
+import ProcessSection from "@/components/process-timeline";
 
 const Home = () => {
   const services = [
@@ -14,7 +23,7 @@ const Home = () => {
       description: "Websites tailored to your brand, built for performance.",
     },
     {
-      icon: <Layers  className="inline" />,
+      icon: <Layers className="inline" />,
       title: "UX & Interface Design",
       description: "Seamless, intuitive interfaces shaped for impact.",
     },
@@ -22,6 +31,28 @@ const Home = () => {
       icon: <Smartphone className="inline" />,
       title: "Web & Mobile Apps",
       description: "Engaging apps that perform across devices.",
+    },
+  ];
+  const processSteps = [
+    {
+      title: "Idea",
+      icon: Lightbulb,
+      description:
+        "We start by understanding your goals and brainstorming solutions.",
+      color: "bg-yellow-200 border-yellow-500 text-foreground",
+    },
+    {
+      title: "Design",
+      icon: Palette,
+      description: "We craft intuitive designs and seamless user experiences.",
+      color: "bg-pink-200 border-pink-500",
+    },
+    {
+      title: "Launch",
+      icon: Rocket,
+      description:
+        "We build, test, and launch your product with performance in mind.",
+      color: "bg-green-200 border-green-500",
     },
   ];
   return (
@@ -47,7 +78,7 @@ const Home = () => {
               </span>{" "} */}
               Into Reality
             </h1>
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
               We design digital experiences where every interaction feels
               seamless. From custom interfaces to powerful apps, PixelSmith
               shapes products that captivate users and deliver impact
@@ -61,7 +92,7 @@ const Home = () => {
         </section>
       </Container>
       {/* Services Section */}
-      <div className="bg-secondary border-border border-y-4">
+      <div className="py-16 bg-secondary border-border border-t-4">
         <Container>
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold">Our Services</h2>
@@ -81,6 +112,9 @@ const Home = () => {
           </div>
         </Container>
       </div>
+
+      {/* Process Section */}
+      <ProcessSection />
     </>
   );
 };
