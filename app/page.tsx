@@ -32,25 +32,25 @@ const Home = () => {
     {
       title: "Compliance Management App",
       description: "Automated compliance tracking with AWS deployment.",
-      image: "/images/compliance.png",
+      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
     {
       title: "Pixelsmith Creative Studio",
       description: "Brand design & digital presence revamp.",
-      image: "/images/pixelsmith.png",
+      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
     {
       title: "ERP SaaS MVP",
       description: "AI-first ERP with plug-and-play modules.",
-      image: "/images/erp.png",
+      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
     {
       title: "Healthcare Data Annotation",
       description: "Static site with Strapi CMS + GraphQL.",
-      image: "/images/health.png",
+      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
   ];
