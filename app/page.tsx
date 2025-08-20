@@ -7,6 +7,7 @@ import ServicesCard from "@/components/services-card";
 import ProcessSection from "@/components/process-timeline";
 import Clientele from "@/components/clientel";
 import ShowcaseCard from "@/components/showcase-card";
+import TestimonialCard from "@/components/testimonial-card";
 
 const Home = () => {
   const services = [
@@ -50,6 +51,51 @@ const Home = () => {
       description: "Static site with Strapi CMS + GraphQL.",
       image: "/images/health.png",
       link: "https://example.com",
+    },
+  ];
+
+  const testimonials = [
+    {
+      name: "Willis Cummings",
+      role: "Forward Accountability Liaison",
+      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      testimonial: "This library is complete garbage.",
+    },
+    {
+      name: "Lillie Green",
+      role: "Global Factors Producer",
+      image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      testimonial:
+        "I don't believe there are people who will actually use this lmao.",
+    },
+  ];
+
+  const testimonials2 = [
+    {
+      name: "Willis Cummings",
+      role: "Forward Accountability Liaison",
+      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      testimonial: "This library is complete garbage.",
+    },
+    {
+      name: "Lillie Green",
+      role: "Global Factors Producer",
+      image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      testimonial:
+        "I don't believe there are people who will actually use this lmao.",
+    },
+    {
+      name: "Willis Cummings",
+      role: "Forward Accountability Liaison",
+      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      testimonial: "This library is complete garbage.",
+    },
+    {
+      name: "Lillie Green",
+      role: "Global Factors Producer",
+      image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      testimonial:
+        "I don't believe there are people who will actually use this lmao.",
     },
   ];
   return (
@@ -145,6 +191,38 @@ const Home = () => {
             </div>
           ))}
         </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className="py-16 bg-secondary-background">
+        <Container>
+          <h2 className="text-3xl font-bold text-center">
+            What Our Clients Really Think (Spoiler: They&apos;re Happy)
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-8 pt-16">
+            <div className="group flex flex-col justify-center">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
+                {testimonials.map((t, i) => (
+                  <TestimonialCard key={i+"1"} {...t} />
+                ))}
+              {/* </div> */}
+            </div>
+            <div className="group flex flex-col justify-center">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
+                {testimonials2.map((t, i) => (
+                  <TestimonialCard key={i+"2"} {...t} />
+                ))}
+              {/* </div> */}
+            </div>
+            <div className="group flex flex-col justify-center">
+              {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
+                {testimonials.map((t, i) => (
+                  <TestimonialCard key={i+"3"} {...t} />
+                ))}
+              {/* </div> */}
+            </div>
+          </div>
+        </Container>
       </section>
     </>
   );
