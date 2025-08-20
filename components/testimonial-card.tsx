@@ -22,7 +22,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   image,
   testimonial,
 }) => (
-  <Card className="border-2 border-border bg-background rounded-base shadow-shadow mb-8">
+  <Card className="border-2 border-border bg-background rounded-base shadow-shadow mb-8 text-foreground">
     <CardHeader className="flex items-center gap-4">
       <img
         src={image}
@@ -31,7 +31,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       />
       <div>
         <h4 className="text-lg font-heading">{name}</h4>
-        <p className="text-sm text-muted-foreground">{role}</p>
+        <p className="text-sm text-foreground/70">{role}</p>
       </div>
     </CardHeader>
     <CardContent className="mt-4 text-sm">
