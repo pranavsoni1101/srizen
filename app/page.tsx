@@ -8,6 +8,7 @@ import ProcessSection from "@/components/process-timeline";
 import Clientele from "@/components/clientel";
 import ShowcaseCard from "@/components/showcase-card";
 import TestimonialCard from "@/components/testimonial-card";
+import ContactForm from "@/components/contact-form";
 
 const Home = () => {
   const services = [
@@ -222,6 +223,22 @@ const Home = () => {
               {/* </div> */}
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-main border-border border-t-4">
+        <Container>
+          <div className="text-center text-black ">
+            <h2 className="text-3xl font-bold">
+              Ready to Get Started?
+            </h2>
+            <p className="mt-2">
+                Supercharge your workflow with our neo-brutalist components.  
+                Build faster, stay consistent, and ship beautiful apps.
+              </p>
+          </div>
+          <ContactForm />
         </Container>
       </section>
     </>
