@@ -10,7 +10,7 @@ interface ServiceCardProps {
 
 const ServicesCard = ({ title, icon, description }: ServiceCardProps) => {
   return (
-    <Card>
+    <Card className="hover:scale-[1.03] transition-transform duration-300">
       <CardHeader>
         <CardTitle> {icon} {title}</CardTitle>
       </CardHeader>
