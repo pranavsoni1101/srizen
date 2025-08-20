@@ -9,6 +9,7 @@ import Clientele from "@/components/clientel";
 import ShowcaseCard from "@/components/showcase-card";
 import TestimonialCard from "@/components/testimonial-card";
 import ContactForm from "@/components/contact-form";
+import { PointerHighlight } from "@/components/ui/pointer-highlight";
 
 const Home = () => {
   const services = [
@@ -106,23 +107,30 @@ const Home = () => {
           <div className="text-center">
             <h1
               className="scroll-m-20 
-             text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl  
+             text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22  
              font-bold tracking-tight 
              max-w-4xl mx-auto text-balance"
             >
               From Vision Through{" "}
-              <MovingBorderStyle
+              {/* <MovingBorderStyle
                 borderRadius="10px"
                 className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full capitalize"
               >
                 PixelSmith
-              </MovingBorderStyle>
+              </MovingBorderStyle> */}
+              <PointerHighlight 
+                containerClassName="inline-block mr-1"
+                rectangleClassName="bg-main/60"
+                pointerClassName="text-main"
+              >
+                <span className="relative px-4 z-40">PixelSmith</span>
+              </PointerHighlight>
               {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
                 PixelSmith
               </span>{" "} */}
               Into Reality
             </h1>
-            <p className="mt-4 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
+            <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
               We design digital experiences where every interaction feels
               seamless. From custom interfaces to powerful apps, PixelSmith
               shapes products that captivate users and deliver impact
