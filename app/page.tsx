@@ -6,23 +6,50 @@ import { ArrowUpRight, Layers, Monitor, Smartphone } from "lucide-react";
 import ServicesCard from "@/components/services-card";
 import ProcessSection from "@/components/process-timeline";
 import Clientele from "@/components/clientel";
+import ShowcaseCard from "@/components/showcase-card";
 
 const Home = () => {
   const services = [
     {
       icon: <Monitor className="inline" />,
       title: "Custom Websites",
-      description: "Websites tailored to your brand, built for performance.",
+      description: "Websites tailored to your brand, built for performance",
     },
     {
       icon: <Layers className="inline" />,
       title: "UX & Interface Design",
-      description: "Seamless, intuitive interfaces shaped for impact.",
+      description: "Seamless, intuitive interfaces shaped for impact",
     },
     {
       icon: <Smartphone className="inline" />,
       title: "Web & Mobile Apps",
-      description: "Engaging apps that perform across devices.",
+      description: "Engaging apps that perform across devices",
+    },
+  ];
+  const showcases = [
+    {
+      title: "Compliance Management App",
+      description: "Automated compliance tracking with AWS deployment.",
+      image: "/images/compliance.png",
+      link: "https://example.com",
+    },
+    {
+      title: "Pixelsmith Creative Studio",
+      description: "Brand design & digital presence revamp.",
+      image: "/images/pixelsmith.png",
+      link: "https://example.com",
+    },
+    {
+      title: "ERP SaaS MVP",
+      description: "AI-first ERP with plug-and-play modules.",
+      image: "/images/erp.png",
+      link: "https://example.com",
+    },
+    {
+      title: "Healthcare Data Annotation",
+      description: "Static site with Strapi CMS + GraphQL.",
+      image: "/images/health.png",
+      link: "https://example.com",
     },
   ];
   return (
@@ -67,7 +94,7 @@ const Home = () => {
           <div className="text-center mb-10">
             <h2 className="text-3xl font-bold">Our Services</h2>
             <p className="text-muted-foreground mt-2">
-              We craft tailored solutions to help your brand stand out.
+              We craft tailored solutions to help your brand stand out
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -88,18 +115,36 @@ const Home = () => {
         <ProcessSection />
       </section>
 
-      {/* Showcase section */}
-      <section className="py-16 bg-secondary border-border border-t-4">
+      {/* Clientele/Showcase section */}
+      <section className="pt-16 bg-secondary border-border border-t-4">
         <Container className="text-center">
           <h2 className="text-3xl font-bold">REAL WORK. REAL BRANDS.</h2>
           <p className="text-muted-foreground mt-2">
             From startups to growing businesses — here are some we&apos;ve
-            partnered with.
+            partnered with
           </p>
         </Container>
-        {/* <Container> */}
         <Clientele />
-        {/* </Container> */}
+        {/* Showcase */}
+        <Container className="text-center">
+          <h2 className="text-3xl font-bold">What We&apos;ve Built</h2>
+          <p className="text-muted-foreground mt-2">
+            Hand-picked projects that highlight how we bring ideas to life —
+            bold, functional, and human-focused
+          </p>
+        </Container>
+        <div className="grid grid-cols-1 md:grid-cols-2 border-border border-t-4 bg-background">
+          {showcases.map((showcase, i) => (
+            <div
+              key={i}
+              className={`p-8 border-border ${
+                i % 2 === 0 ? "border-r-4 border-b-4" : "border-b-4"
+              } ${i >= showcases.length - 2 ? "border-b-0" : ""}`}
+            >
+              <ShowcaseCard {...showcase} />
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
