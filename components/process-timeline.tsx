@@ -37,7 +37,7 @@ const ProcessSection = () => {
   ];
 
   return (
-    <div className=" py-16 border-border border-t-4">
+    <div className="bag-grid py-16 border-border border-t-4">
       <Container>
         <h2 className="text-3xl font-bold mb-10 text-center">Our Process</h2>
 

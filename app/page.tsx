@@ -1,4 +1,3 @@
-"use client";
 import GetInTouchButton from "@/components/contact-button";
 import { Container } from "@/components/container";
 import { MovingBorderStyle } from "@/components/moving-border";
@@ -10,7 +9,49 @@ import ShowcaseCard from "@/components/showcase-card";
 import TestimonialCard from "@/components/testimonial-card";
 import ContactForm from "@/components/contact-form";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "PixelSmith – From Vision Through PixelSmith Into Reality",
+  description:
+    "PixelSmith transforms ideas into seamless digital experiences. We design and build custom websites, intuitive apps, and impactful interfaces — where every pixel matters.",
+  keywords: [
+    "PixelSmith",
+    "web development agency",
+    "React development",
+    "Next.js websites",
+    "UI UX design",
+    "frontend development",
+    "backend development",
+    "mobile apps",
+    "custom web apps",
+    "digital experiences",
+  ],
+  openGraph: {
+    title: "PixelSmith – Crafting Seamless Digital Experiences",
+    description:
+      "From startups to growing businesses, PixelSmith builds websites, apps, and experiences that captivate users and deliver measurable impact.",
+    url: "https://builtby-pixel-smith.vercel.app", // update with your real domain
+    siteName: "PixelSmith",
+    images: [
+      {
+        url: "/og-image.png", // place an image in /public for OG
+        width: 1200,
+        height: 630,
+        alt: "PixelSmith Web Development & Design",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PixelSmith – Web Development & Design Agency",
+    description:
+      "We design and build custom websites, mobile apps, and seamless digital products that deliver impact.",
+    images: ["/og-image.png"],
+  },
+};
 const Home = () => {
   const services = [
     {
@@ -33,25 +74,29 @@ const Home = () => {
     {
       title: "Compliance Management App",
       description: "Automated compliance tracking with AWS deployment.",
-      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
+      image:
+        "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
     {
       title: "Pixelsmith Creative Studio",
       description: "Brand design & digital presence revamp.",
-      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
+      image:
+        "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
     {
       title: "ERP SaaS MVP",
       description: "AI-first ERP with plug-and-play modules.",
-      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
+      image:
+        "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
     {
       title: "Healthcare Data Annotation",
       description: "Static site with Strapi CMS + GraphQL.",
-      image: "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
+      image:
+        "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
     },
   ];
@@ -60,13 +105,15 @@ const Home = () => {
     {
       name: "Willis Cummings",
       role: "Forward Accountability Liaison",
-      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       testimonial: "This library is complete garbage.",
     },
     {
       name: "Lillie Green",
       role: "Global Factors Producer",
-      image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       testimonial:
         "I don't believe there are people who will actually use this lmao.",
     },
@@ -76,73 +123,79 @@ const Home = () => {
     {
       name: "Willis Cummings",
       role: "Forward Accountability Liaison",
-      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       testimonial: "This library is complete garbage.",
     },
     {
       name: "Lillie Green",
       role: "Global Factors Producer",
-      image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       testimonial:
         "I don't believe there are people who will actually use this lmao.",
     },
     {
       name: "Willis Cummings",
       role: "Forward Accountability Liaison",
-      image: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=1143&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       testimonial: "This library is complete garbage.",
     },
     {
       name: "Lillie Green",
       role: "Global Factors Producer",
-      image: "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       testimonial:
         "I don't believe there are people who will actually use this lmao.",
     },
   ];
   return (
     <>
-      <Container className="min-h-[calc(100vh-76px)] sm:min-h-[calc(100vh-72px)] flex  items-center justify-center">
-        <section className="flex  items-center justify-center">
-          <div className="text-center">
-            <h1
-              className="scroll-m-20 
+      <div className="bag-grid">
+        <Container className="min-h-[calc(100vh-76px)] sm:min-h-[calc(100vh-72px)] flex  items-center justify-center">
+          <section className="flex  items-center justify-center">
+            <div className="text-center">
+              <h1
+                className="scroll-m-20 
              text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22  
              font-bold tracking-tight 
              max-w-4xl mx-auto text-balance"
-            >
-              From Vision Through{" "}
-              {/* <MovingBorderStyle
+              >
+                From Vision Through{" "}
+                {/* <MovingBorderStyle
                 borderRadius="10px"
                 className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full capitalize"
               >
                 PixelSmith
               </MovingBorderStyle> */}
-              <PointerHighlight 
-                containerClassName="inline-block mr-1"
-                rectangleClassName="bg-main/60"
-                pointerClassName="text-main"
-              >
-                <span className="relative px-4 z-40">PixelSmith</span>
-              </PointerHighlight>
-              {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
+                <PointerHighlight
+                  containerClassName="inline-block mr-1"
+                  rectangleClassName="bg-main/60"
+                  pointerClassName="text-main"
+                >
+                  <span className="relative px-4 z-40">PixelSmith</span>
+                </PointerHighlight>
+                {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
                 PixelSmith
               </span>{" "} */}
-              Into Reality
-            </h1>
-            <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
-              We design digital experiences where every interaction feels
-              seamless. From custom interfaces to powerful apps, PixelSmith
-              shapes products that captivate users and deliver impact
-            </p>
-            <GetInTouchButton
-              text="Design my Experience"
-              className="mt-4"
-              icon={<ArrowUpRight className="w-5 h-5" />}
-            />
-          </div>
-        </section>
-      </Container>
+                Into Reality
+              </h1>
+              <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
+                We design digital experiences where every interaction feels
+                seamless. From custom interfaces to powerful apps, PixelSmith
+                shapes products that captivate users and deliver impact
+              </p>
+              <GetInTouchButton
+                text="Design my Experience"
+                className="mt-4"
+                icon={<ArrowUpRight className="w-5 h-5" />}
+              />
+            </div>
+          </section>
+        </Container>
+      </div>
       {/* Services Section */}
       <section className="py-16 bg-secondary border-border border-t-4">
         <Container>
@@ -171,7 +224,7 @@ const Home = () => {
       </section>
 
       {/* Clientele/Showcase section */}
-      <section className="pt-16 bg-secondary border-border border-t-4">
+      <section className="bg-grid min-h-screen pt-16 bg-secondary border-border border-t-4">
         <Container className="text-center">
           <h2 className="text-3xl font-bold">REAL WORK. REAL BRANDS.</h2>
           <p className="text-muted-foreground mt-2">
@@ -192,7 +245,7 @@ const Home = () => {
           {showcases.map((showcase, i) => (
             <div
               key={i}
-              className={`p-8 border-border ${
+              className={`bag-grid p-8 border-border ${
                 i % 2 === 0 ? "border-r-4 border-b-4" : "border-b-4"
               } ${i >= showcases.length - 2 ? "border-b-0" : ""}`}
             >
@@ -203,7 +256,7 @@ const Home = () => {
       </section>
 
       {/* Testimonial Section */}
-      <section className="py-16 bg-secondary-background">
+      <section className=" py-16 bg-secondary-background">
         <Container>
           <h2 className="text-3xl font-bold text-center">
             What Our Clients Really Think (Spoiler: They&apos;re Happy)
@@ -211,23 +264,23 @@ const Home = () => {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-8 pt-16">
             <div className="group flex flex-col justify-center">
               {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
-                {testimonials.map((t, i) => (
-                  <TestimonialCard key={i+"1"} {...t} />
-                ))}
+              {testimonials.map((t, i) => (
+                <TestimonialCard key={i + "1"} {...t} />
+              ))}
               {/* </div> */}
             </div>
             <div className="group flex flex-col justify-center">
               {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
-                {testimonials2.map((t, i) => (
-                  <TestimonialCard key={i+"2"} {...t} />
-                ))}
+              {testimonials2.map((t, i) => (
+                <TestimonialCard key={i + "2"} {...t} />
+              ))}
               {/* </div> */}
             </div>
             <div className="group flex flex-col justify-center">
               {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6"> */}
-                {testimonials.map((t, i) => (
-                  <TestimonialCard key={i+"3"} {...t} />
-                ))}
+              {testimonials.map((t, i) => (
+                <TestimonialCard key={i + "3"} {...t} />
+              ))}
               {/* </div> */}
             </div>
           </div>
@@ -235,16 +288,14 @@ const Home = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 bg-main border-border border-t-4">
+      <section className="bag-grid py-16 bg-main border-border border-t-4">
         <Container>
           <div className="text-center text-black ">
-            <h2 className="text-3xl font-bold">
-              Ready to Get Started?
-            </h2>
+            <h2 className="text-3xl font-bold">Ready to Get Started?</h2>
             <p className="mt-2">
-                Supercharge your workflow with our neo-brutalist components.  
-                Build faster, stay consistent, and ship beautiful apps.
-              </p>
+              Supercharge your workflow with our neo-brutalist components. Build
+              faster, stay consistent, and ship beautiful apps.
+            </p>
           </div>
           <ContactForm />
         </Container>
