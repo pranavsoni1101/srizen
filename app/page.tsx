@@ -1,4 +1,3 @@
-"use client";
 import GetInTouchButton from "@/components/contact-button";
 import { Container } from "@/components/container";
 import { MovingBorderStyle } from "@/components/moving-border";
@@ -10,7 +9,49 @@ import ShowcaseCard from "@/components/showcase-card";
 import TestimonialCard from "@/components/testimonial-card";
 import ContactForm from "@/components/contact-form";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
+import type { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "PixelSmith – From Vision Through PixelSmith Into Reality",
+  description:
+    "PixelSmith transforms ideas into seamless digital experiences. We design and build custom websites, intuitive apps, and impactful interfaces — where every pixel matters.",
+  keywords: [
+    "PixelSmith",
+    "web development agency",
+    "React development",
+    "Next.js websites",
+    "UI UX design",
+    "frontend development",
+    "backend development",
+    "mobile apps",
+    "custom web apps",
+    "digital experiences",
+  ],
+  openGraph: {
+    title: "PixelSmith – Crafting Seamless Digital Experiences",
+    description:
+      "From startups to growing businesses, PixelSmith builds websites, apps, and experiences that captivate users and deliver measurable impact.",
+    url: "https://builtby-pixel-smith.vercel.app", // update with your real domain
+    siteName: "PixelSmith",
+    images: [
+      {
+        url: "/og-image.png", // place an image in /public for OG
+        width: 1200,
+        height: 630,
+        alt: "PixelSmith Web Development & Design",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "PixelSmith – Web Development & Design Agency",
+    description:
+      "We design and build custom websites, mobile apps, and seamless digital products that deliver impact.",
+    images: ["/og-image.png"],
+  },
+};
 const Home = () => {
   const services = [
     {

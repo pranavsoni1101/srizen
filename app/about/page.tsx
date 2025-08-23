@@ -6,9 +6,8 @@ import Image from "next/image";
 import { FlipWords } from "@/components/ui/flip-words";
 import type { Metadata } from "next";
 
-
 export const metadata: Metadata = {
-  title: "About Us | PixelSmith",
+  title: "About Us",
   description:
     "At PixelSmith, we forge digital experiences pixel by pixel. Learn about our values, vision, and passion for creating user-focused websites and applications that blend creativity with performance.",
   openGraph: {
@@ -38,7 +37,6 @@ export const metadata: Metadata = {
     ],
   },
 };
-
 
 const About = () => {
   const words = [
