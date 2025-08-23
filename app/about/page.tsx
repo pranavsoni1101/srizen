@@ -1,10 +1,17 @@
 import { Container } from "@/components/container";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code, Paintbrush, Shield, Sparkles } from "lucide-react";
+import { Code, Hammer, Paintbrush, Shield, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { FlipWords } from "@/components/ui/flip-words";
 
 const About = () => {
+  const words = [
+    "Pixel by Pixel",
+    "Pixel Perfect",
+    "with Impact",
+    "with Creativity",
+  ];
   return (
     <>
       <section className="bg-secondary-background pb-8">
@@ -12,11 +19,11 @@ const About = () => {
           <Container>
             <h1
               className="scroll-m-20 
-             text-3xl sm:text-4xl md:text-5xl lg:text-6xl  
+             text-3xl sm:text-4xl md:text-5xl lg:text-6xl/18  
              font-bold tracking-tight 
-            mx-auto text-balance italic"
+            mx-auto text-balance italic max-w-3xl"
             >
-              Forging Experiences, Pixel by Pixel
+              Forging Experiences, <FlipWords words={words} />
             </h1>
           </Container>
         </div>
@@ -91,13 +98,6 @@ const About = () => {
                     className="object-cover rounded-lg"
                   />
                 </div>
-                {/* <Image
-                  className="rounded-base "
-                  width={500}
-                  height={500}
-                  alt="Pranav Soni's image"
-                  src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                /> */}
               </div>
               <div className="my-auto">
                 <p className="text-base sm:text-lg text-foreground/80 leading-relaxed">
@@ -120,12 +120,31 @@ const About = () => {
             </CardContent>
           </Card>
 
-{/* CTA */}
-                <div className="mt-16 flex justify-center">
+          {/* CTA */}
+          {/* <div className="mt-16 flex justify-center">
                     <Button>
-                        Let&apos;s Build Something Together
+                        Let&apos;s Build Something Together {<Hammer className="h- w-12"/>}
                     </Button>
-                </div>
+                </div> */}
+        </Container>
+      </section>
+      {/* CTA Section */}
+      <section className="bg-main text-main-foreground py-16 border-border border-t-4 ">
+        <Container className="text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+            Ready to bring your vision to life?
+          </h2>
+          <p className="text-black/70 sm:text-lg max-w-2xl mx-auto mb-8">
+            Whether it’s crafting pixel-perfect interfaces or building scalable
+            systems — let’s create something remarkable together.
+          </p>
+          <Button
+            size="lg"
+            className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
+          >
+            Let&apos;s Build Something Together
+            <Hammer className="h-5 w-5" />
+          </Button>
         </Container>
       </section>
     </>
