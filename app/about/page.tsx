@@ -4,6 +4,41 @@ import { Button } from "@/components/ui/button";
 import { Code, Hammer, Paintbrush, Shield, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { FlipWords } from "@/components/ui/flip-words";
+import type { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "About Us | PixelSmith",
+  description:
+    "At PixelSmith, we forge digital experiences pixel by pixel. Learn about our values, vision, and passion for creating user-focused websites and applications that blend creativity with performance.",
+  openGraph: {
+    title: "About Us | PixelSmith",
+    description:
+      "Discover the story behind PixelSmith — a creative studio dedicated to building seamless, functional, and beautifully designed digital experiences.",
+    url: "https://builtby-pixel-smith.vercel.app/about",
+    siteName: "PixelSmith",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1080&auto=format&fit=crop",
+        width: 1200,
+        height: 630,
+        alt: "PixelSmith - About Us",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "About Us | PixelSmith",
+    description:
+      "PixelSmith crafts user-first digital products — blending creativity, design, and technology to deliver seamless experiences.",
+    images: [
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1080&auto=format&fit=crop",
+    ],
+  },
+};
+
 
 const About = () => {
   const words = [
@@ -15,7 +50,7 @@ const About = () => {
   return (
     <>
       <section className="bg-secondary-background pb-8">
-        <div className="py-6 text-center bg-background text-foreground  border-border border-b-4">
+        <div className="py-6 text-center bg-background text-foreground  border-border border-b-4 bag-grid">
           <Container>
             <h1
               className="scroll-m-20 
@@ -129,7 +164,7 @@ const About = () => {
         </Container>
       </section>
       {/* CTA Section */}
-      <section className="bg-main text-main-foreground py-16 border-border border-t-4 ">
+      <section className="bag-grid bg-main text-main-foreground py-16 border-border border-t-4 ">
         <Container className="text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
             Ready to bring your vision to life?
@@ -143,7 +178,7 @@ const About = () => {
             className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
           >
             Let&apos;s Build Something Together
-            <Hammer className="h-5 w-5" />
+            <Hammer className="h-8 w-8" />
           </Button>
         </Container>
       </section>
