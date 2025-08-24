@@ -109,7 +109,7 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
 
   return (
-    <>
+    <div className="sticky top-0 z-100">
       {/* Navigation Menu */}
       <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
         <div className="text-xl font-heading font-bold text-text">PixleSmith</div>
@@ -125,36 +125,11 @@ export default function Navbar() {
 
           {/* About Us with Dropdown */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>About Us</NavigationMenuTrigger>
-            <NavigationMenuContent>
-              <ul className="grid w-[500px] gap-3 p-2 lg:grid-cols-[.75fr_1fr]">
-                <li className="row-span-3">
-                  <NavigationMenuLink asChild>
-                    <Link
-                      href="/about"
-                      className="flex h-full w-full select-none flex-col justify-end rounded-base p-6 no-underline outline-hidden border-2 border-border bg-secondary"
-                    >
-                      <div className="mb-2 mt-4 text-lg font-heading text-foreground">
-                        About Us
-                      </div>
-                      <p className="text-sm font-base leading-tight text-foreground">
-                        Discover who we are, what we believe in, and how we're
-                        making a difference in the world.
-                      </p>
-                    </Link>
-                  </NavigationMenuLink>
-                </li>
-                <ListItem href="/about/story" title="Our Story">
-                  Learn about our journey and mission.
-                </ListItem>
-                <ListItem href="/about/team" title="Team">
-                  Meet the people behind our success.
-                </ListItem>
-                <ListItem href="/about/careers" title="Careers">
-                  Join our growing team of innovators.
-                </ListItem>
-              </ul>
-            </NavigationMenuContent>
+            <Link href="/about" passHref legacyBehavior>
+              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                About Us
+              </NavigationMenuLink>
+            </Link>
           </NavigationMenuItem>
 
           {/* Showcase with Dropdown */}
@@ -237,7 +212,7 @@ export default function Navbar() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 ListItem.displayName = "ListItem";
