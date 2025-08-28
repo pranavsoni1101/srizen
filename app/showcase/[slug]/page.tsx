@@ -14,10 +14,10 @@ export async function generateMetadata({
   const { slug } = await params; // ✅ await here
   const project = projects.find((p) => p.slug === slug);
 
-  if (!project) return { title: "Project Not Found | PixelSmith" };
+  if (!project) return { title: "Project Not Found" };
 
   return {
-    title: `${project.title} | PixelSmith`,
+    title: `${project.title}`,
     description: project.description,
     openGraph: {
       images: [project.image],
