@@ -1,5 +1,6 @@
 "use client";
 import { Container } from "@/components/container";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import {
   Carousel,
@@ -11,45 +12,53 @@ import {
 import { FlipWords } from "@/components/ui/flip-words";
 import Autoplay from "embla-carousel-autoplay";
 import ClassNames from "embla-carousel-class-names";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Showcase = () => {
   const words = ["Raw.", "Bold.", "Built."];
   const showcases = [
     {
-      title: "Compliance Management App 1",
-      description: "Automated compliance tracking with t.",
-      image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "#",
+      title: "Personal Portfolio",
+      description:
+        "A modern portfolio built with Next.js and deployed on Vercel, showcasing my eye for design and UI detailing",
+      image:"/pranav-soni-portfolio.png",
+      link: "/showcase/pranavsoni-portfolio",
     },
     {
       title: "Creative Studio Branding 1",
       description: "Brand design & digital presence revamp.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "/image.png",
       link: "#",
     },
     {
       title: "ERP SaaS MVP 1",
       description: "AI-first ERP with plug-and-play modules.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "/image.png",
       link: "#",
     },
     {
       title: "Compliance Management App 2",
       description: "Automated compliance tracking with t.",
-      image: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       link: "#",
     },
     {
       title: "Creative Studio Branding 2",
       description: "Brand design & digital presence revamp.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "/image.png",
       link: "#",
     },
     {
       title: "ERP SaaS MVP 2",
       description: "AI-first ERP with plug-and-play modules.",
-      image: "https://images.unsplash.com/photo-1560807707-8cc77767d783?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      image:
+        "/image.png",
       link: "#",
     },
   ];
@@ -74,19 +83,19 @@ const Showcase = () => {
 
       <section className=" bg-secondary overflow-hidden">
         <Container>
-
-              <blockquote className="mt-6 mb-12 border-l-2 pl-6 italic mx-auto max-w-lg">
-              Design, technology, and storytelling come together here. See how we’ve shaped brands and built products that stand out
-              </blockquote>
+          <blockquote className="mt-6 mb-12 border-l-2 pl-6 italic mx-auto max-w-lg">
+            Design, technology, and storytelling come together here. See how
+            we’ve shaped brands and built products that stand out
+          </blockquote>
           <Carousel
             className="w-full"
             opts={{
-              align: "center",   // center the active slide
+              align: "center", // center the active slide
               loop: true,
               skipSnaps: false,
             }}
             plugins={[
-              Autoplay({ delay: 2500, stopOnInteraction: false }),
+              Autoplay({ delay: 5000, stopOnInteraction: true }),
               ClassNames(), // adds .is-snapped / .is-selected etc to slides
             ]}
           >
@@ -109,25 +118,36 @@ const Showcase = () => {
                     basis-[85%] md:basis-[60%]
                   "
                 >
-                  <Card className="slide-card mx-auto shadow-lg rounded-2xl h-[480px] overflow-hidden">
-                     <div className="relative w-full h-56">
-    <Image
-      src={item.image}
-      alt={item.title}
-      fill
-      className="object-cover"
-      sizes="(max-width: 768px) 100vw, 600px"
-    />
-  </div>
-                    <CardContent className="flex flex-col items-center justify-center p-6">
-                      <h3 className="text-xl font-semibold text-foreground">{item.title}</h3>
-                      <p className="text-muted-foreground mt-2 text-center">{item.description}</p>
-                      <a
+                  <Card className="slide-card mx-auto shadow-lg rounded-2xl overflow-hidden">
+                    {/* Image wrapper with aspect ratio */}
+  <div className="relative w-full">
+      <Image
+        src={item.image}
+        alt={item.title}
+        width={800}        // set large width for quality
+        height={0}         // let height scale automatically
+        className="w-full h-auto object-contain"
+        sizes="(max-width: 640px) 100vw, 
+               (max-width: 768px) 70vw, 
+               (max-width: 1024px) 50vw, 
+               400px"
+      />
+    </div>
+                    <CardContent className="flex flex-col items-center justify-center p-6 text-black">
+                      <h3 className="text-xl font-semibold">{item.title}</h3>
+                      <p className="text-black/80 mt-2 text-center">
+                        {item.description}
+                      </p>
+                      <Link href={item.link} passHref>
+                        <Button className="dark mt-4 bg-secondary text-foreground">
+                          View Details {<ArrowRight />}
+                        </Button>
+                      </Link>
+                      {/* <a
                         href={item.link}
                         className="mt-4 inline-block text-primary hover:underline"
                       >
-                        View Details →
-                      </a>
+                      </a> */}
                     </CardContent>
                   </Card>
                 </CarouselItem>
