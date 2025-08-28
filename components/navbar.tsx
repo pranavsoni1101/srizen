@@ -110,7 +110,9 @@ export default function Navbar() {
 
           {/* Showcase with Dropdown */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Showcase</NavigationMenuTrigger>
+            <Link href="/showcase" passHref>
+              <NavigationMenuTrigger>Showcase</NavigationMenuTrigger>
+            </Link>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {showcaseItems.map((item) => (
