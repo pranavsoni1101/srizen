@@ -23,21 +23,19 @@ const Showcase = () => {
       title: "Personal Portfolio",
       description:
         "A modern portfolio built with Next.js and deployed on Vercel, showcasing my eye for design and UI detailing",
-      image:"/pranav-soni-portfolio.png",
+      image: "/pranav-soni-portfolio.png",
       link: "/showcase/pranavsoni-portfolio",
     },
     {
       title: "Creative Studio Branding 1",
       description: "Brand design & digital presence revamp.",
-      image:
-        "/image.png",
+      image: "/image.png",
       link: "#",
     },
     {
       title: "ERP SaaS MVP 1",
       description: "AI-first ERP with plug-and-play modules.",
-      image:
-        "/image.png",
+      image: "/image.png",
       link: "#",
     },
     {
@@ -50,15 +48,13 @@ const Showcase = () => {
     {
       title: "Creative Studio Branding 2",
       description: "Brand design & digital presence revamp.",
-      image:
-        "/image.png",
+      image: "/image.png",
       link: "#",
     },
     {
       title: "ERP SaaS MVP 2",
       description: "AI-first ERP with plug-and-play modules.",
-      image:
-        "/image.png",
+      image: "/image.png",
       link: "#",
     },
   ];
@@ -120,19 +116,19 @@ const Showcase = () => {
                 >
                   <Card className="slide-card mx-auto shadow-lg rounded-2xl overflow-hidden">
                     {/* Image wrapper with aspect ratio */}
-  <div className="relative w-full">
-      <Image
-        src={item.image}
-        alt={item.title}
-        width={800}        // set large width for quality
-        height={0}         // let height scale automatically
-        className="w-full h-auto object-contain"
-        sizes="(max-width: 640px) 100vw, 
+                    <div className="relative w-full">
+                      <Image
+                        src={item.image}
+                        alt={item.title}
+                        width={800} // set large width for quality
+                        height={0} // let height scale automatically
+                        className="w-full h-auto object-contain"
+                        sizes="(max-width: 640px) 100vw, 
                (max-width: 768px) 70vw, 
                (max-width: 1024px) 50vw, 
                400px"
-      />
-    </div>
+                      />
+                    </div>
                     <CardContent className="flex flex-col items-center justify-center p-6 text-black">
                       <h3 className="text-xl font-semibold">{item.title}</h3>
                       <p className="text-black/80 mt-2 text-center">

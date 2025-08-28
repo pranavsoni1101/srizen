@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Container } from "@/components/container";
 import { Metadata } from "next";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const project = projects.find((p) => p.slug === params.slug);
 
-export async function generateMetadata(
-  { params }: { params: { slug: string } }
-): Promise<Metadata> {
-  const project = projects.find(p => p.slug === params.slug)
-
-  if (!project) return { title: "Project Not Found | PixelSmith" }
+  if (!project) return { title: "Project Not Found | PixelSmith" };
 
   return {
     title: `${project.title}`,
@@ -35,7 +36,7 @@ export async function generateMetadata(
       description: project.description,
       images: [project.image],
     },
-  }
+  };
 }
 
 export default async function ProjectPage({
