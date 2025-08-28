@@ -19,36 +19,12 @@ import { Button } from "./ui/button";
 import { Calendar, Hamburger } from "lucide-react";
 import GetInTouchButton from "./contact-button";
 
-const aboutItems = [
-  {
-    title: "Our Story",
-    href: "/about/story",
-    description:
-      "Learn about our journey, mission, and the values that drive us forward.",
-  },
-  {
-    title: "Team",
-    href: "/about/team",
-    description: "Meet the talented individuals who make our vision a reality.",
-  },
-  {
-    title: "Careers",
-    href: "/about/careers",
-    description: "Join our growing team and help shape the future with us.",
-  },
-  {
-    title: "Culture",
-    href: "/about/culture",
-    description: "Discover our workplace culture and what makes us unique.",
-  },
-];
-
 const showcaseItems = [
   {
-    title: "Web Design",
-    href: "/showcase/web",
+    title: "Pranav Soni Portfolio",
+    href: "/showcase/pranavsoni-portfolio",
     description:
-      "Stunning websites that captivate users and drive conversions.",
+      "A modern portfolio built with Next.js, deployed on Vercel, showcasing an eye for UI detailing.",
   },
   {
     title: "Mobile Apps",
@@ -134,7 +110,9 @@ export default function Navbar() {
 
           {/* Showcase with Dropdown */}
           <NavigationMenuItem>
-            <NavigationMenuTrigger>Showcase</NavigationMenuTrigger>
+            <Link href="/showcase" passHref>
+              <NavigationMenuTrigger>Showcase</NavigationMenuTrigger>
+            </Link>
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {showcaseItems.map((item) => (

@@ -72,11 +72,11 @@ const Home = () => {
   ];
   const showcases = [
     {
-      title: "Compliance Management App",
-      description: "Automated compliance tracking with AWS deployment.",
-      image:
-        "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
-      link: "https://example.com",
+      title: "Pranav Soni Portfolio",
+      description:
+        "A personal portfolio built with Next.js and deployed on Vercel, showcasing eye for UI detail and responsiveness.",
+      image: "pranav-soni-portfolio.png",
+      link: "/showcase/pranavsoni-portfolio",
     },
     {
       title: "Pixelsmith Creative Studio",
