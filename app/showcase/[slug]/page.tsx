@@ -9,31 +9,17 @@ import { Metadata } from "next";
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
-}): Promise<Metadata> {
-  const project = projects.find((p) => p.slug === params.slug);
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params; // ✅ await here
+  const project = projects.find((p) => p.slug === slug);
 
   if (!project) return { title: "Project Not Found | PixelSmith" };
 
   return {
-    title: `${project.title}`,
+    title: `${project.title} | PixelSmith`,
     description: project.description,
     openGraph: {
-      title: project.title,
-      description: project.description,
-      images: [
-        {
-          url: project.image,
-          width: 1200,
-          height: 630,
-          alt: project.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: project.title,
-      description: project.description,
       images: [project.image],
     },
   };
@@ -42,9 +28,9 @@ export async function generateMetadata({
 export default async function ProjectPage({
   params,
 }: {
-  params: Promise<{ slug: string }>; // 👈 mark as Promise
+  params: Promise<{ slug: string }>;
 }) {
-  const { slug } = await params; // 👈 await it
+  const { slug } = await params; // ✅ await here
   const project = projects.find((p) => p.slug === slug);
 
   if (!project) return notFound();
@@ -113,9 +99,8 @@ export default async function ProjectPage({
           <h2 className="text-xl font-semibold">Screenshots</h2>
           <div className="grid md:grid-cols-2 gap-4 mt-4">
             {project.details.screenshots.map((src, i) => (
-              <div className="relative w-full aspect-[16/9]">
+              <div key={i} className="relative w-full aspect-[16/9]">
                 <Image
-                  key={i}
                   src={src}
                   alt={`${project.title} screenshot ${i + 1}`}
                   fill
