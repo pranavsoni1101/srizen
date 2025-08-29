@@ -21,8 +21,7 @@ export const metadata: Metadata = {
     default: "Srizen – Crafting Experiences",
     template: "%s | Srizen",
   },
-  description:
-    "Srizen is a creative web development studio specializing in custom websites, web apps, and digital experiences that blend design and technology.",
+  description: "Srizen (from Srijan: creation & innovation) transforms ideas into seamless digital experiences.",
   keywords: [
     "Srizen",
     "web development",
