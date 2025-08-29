@@ -35,7 +35,7 @@ export default function Footer() {
         {/* Contact / Socials */}
         <div className="space-y-2">
           <a
-            href="mailto:hello@pixelsmith.com"
+            href="mailto:hello@srizen.com"
             className="block hover:underline hover:underline-offset-4 decoration-main transition"
           >
             hello@srizen.com

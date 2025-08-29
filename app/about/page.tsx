@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     title: "About Us | Srizen",
     description:
       "Discover the story behind Srizen — a creative studio dedicated to building seamless, functional, and beautifully designed digital experiences.",
-    url: "https://builtby-pixel-smith.vercel.app/about",
+    url: "https://srizen/about",
     siteName: "Srizen",
     images: [
       {

@@ -16,27 +16,27 @@ import {
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with PixelSmith — a remote-first design and development studio crafting pixel-perfect experiences. Whether it’s a project idea, collaboration, or just a hello, we’d love to hear from you.",
+    "Get in touch with Srizen — a remote-first design and development studio crafting pixel-perfect experiences. Whether it’s a project idea, collaboration, or just a hello, we’d love to hear from you.",
   keywords: [
-    "PixelSmith contact",
+    "Srizen contact",
     "design studio contact",
     "web development contact",
-    "hire PixelSmith",
+    "hire Srizen",
     "UI UX agency contact",
     "remote design team",
   ],
   openGraph: {
-    title: "Contact PixelSmith",
+    title: "Contact Srizen",
     description:
-      "Have a project in mind? Reach out to PixelSmith — a remote-first studio blending design & development into seamless digital experiences.",
-    url: "https://builtby-pixel-smith.vercel.app/contact",
-    siteName: "PixelSmith",
+      "Have a project in mind? Reach out to Srizen — a remote-first studio blending design & development into seamless digital experiences.",
+    url: "https://srizen.com/contact",
+    siteName: "Srizen",
     images: [
       {
-        url: "https://builtby-pixel-smith.vercel.app/contact-banner.png", // (replace with your actual OG image)
+        url: "https://srizen.com/contact-banner.png", // (replace with your actual OG image)
         width: 1200,
         height: 630,
-        alt: "Contact PixelSmith",
+        alt: "Contact Srizen",
       },
     ],
     locale: "en_US",
@@ -44,10 +44,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact PixelSmith",
+    title: "Contact Srizen",
     description:
       "We’re remote-first and always a message away. Let’s collaborate to forge your vision into reality.",
-    images: ["https://builtby-pixel-smith.vercel.app/og/contact-banner.png"],
+    images: ["https://srizen.com/og/contact-banner.png"],
   },
 };
 
@@ -113,10 +113,10 @@ export default function Contact() {
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5" />
                       <a
-                        href="mailto:hello@pixelsmith.com"
+                        href="mailto:hello@Srizen.com"
                         className="hover:underline"
                       >
-                        hello@pixelsmith.com
+                        hello@Srizen.com
                       </a>
                     </div>
 
@@ -126,23 +126,14 @@ export default function Contact() {
                         +91 98765 43210
                       </a>
                     </div>
-
-                    <div className="flex items-center gap-3">
-                      <MapPin className="w-5 h-5" />
-                      <span>
-                        PixelSmith HQ, MG Road
-                        <br />
-                        Pune, India
-                      </span>
-                    </div>
                   </CardContent>
                 </Card>
                 <Card className="bg-main text-black max-w-full shadow-lg rounded-2xl">
-                  <CardContent className="mx-auto my-auto p-6 space-y-4">
+                  <CardContent className="mx-auto my-auto p-12 space-y-4">
                     <div className="flex items-center gap-3">
                       <Linkedin className="w-5 h-5" />
                       <a
-                        href="https://linkedin.com/company/pixelsmith"
+                        href="https://linkedin.com/company/Srizen"
                         className="hover:underline"
                       >
                         LinkedIn
@@ -152,22 +143,13 @@ export default function Contact() {
                     <div className="flex items-center gap-3">
                       <Twitter className="w-5 h-5" />
                       <a
-                        href="https://twitter.com/pixelsmith"
+                        href="https://twitter.com/Srizen"
                         className="hover:underline"
                       >
                         Twitter
                       </a>
                     </div>
 
-                    <div className="flex items-center gap-3">
-                      <Instagram className="w-5 h-5" />
-                      <a
-                        href="https://instagram.com/pixelsmith"
-                        className="hover:underline"
-                      >
-                        Instagram
-                      </a>
-                    </div>
                   </CardContent>
                 </Card>
               </div>
