@@ -1,38 +1,24 @@
 import { Container } from "@/components/container";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
 import { FlipWords } from "@/components/ui/flip-words";
-import Autoplay from "embla-carousel-autoplay";
-import ClassNames from "embla-carousel-class-names";
-import { ArrowRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import type { Metadata } from "next";
 import ShowcaseClientCarousel from "@/components/showcase-client-carousel";
 
 export const metadata: Metadata = {
   title: "Showcase",
   description:
-    "Explore PixelSmith’s creative showcase: portfolios, apps, and branding projects that highlight design, technology, and storytelling.",
+    "Explore Srizen’s creative showcase: portfolios, apps, and branding projects that highlight design, technology, and storytelling.",
   openGraph: {
-    title: "PixelSmith Showcase",
+    title: "Srizen Showcase",
     description:
-      "See how PixelSmith crafts bold, raw, and built digital experiences across design, development, and branding.",
-    url: "https://yourdomain.com/showcase",
-    siteName: "PixelSmith",
+      "See how Srizen crafts bold, raw, and built digital experiences across design, development, and branding.",
+    url: "https://srizen.com/showcase",
+    siteName: "Srizen",
     images: [
       {
         url: "/og-showcase.png", // add an OG image in your public folder
         width: 1200,
         height: 630,
-        alt: "PixelSmith Showcase",
+        alt: "Srizen Showcase",
       },
     ],
     locale: "en_US",
@@ -40,17 +26,16 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PixelSmith Showcase",
+    title: "Srizen Showcase",
     description:
-      "Explore PixelSmith’s projects: design, development, and branding done right.",
+      "Explore Srizen’s projects: design, development, and branding done right.",
     images: ["/og-showcase.png"],
   },
 };
 
-
 const Showcase = () => {
   const words = ["Raw.", "Bold.", "Built."];
-  
+
   const carouselOptions = {
     // Aligns the slides to the center of the viewport
     align: "center", // Allows free dragging and does not snap to the nearest slide
@@ -63,7 +48,7 @@ const Showcase = () => {
         <div className="py-6 text-center bg-background text-foreground border-border border-b-4 bag-grid">
           <Container>
             <h1 className="scroll-m-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl/18 font-bold tracking-tight mx-auto text-balance italic max-w-3xl">
-              PixelSmith in Action. <br />
+              Srizen in Action. <br />
               <FlipWords words={words} />
             </h1>
           </Container>
