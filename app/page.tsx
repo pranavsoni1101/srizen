@@ -12,11 +12,11 @@ import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "PixelSmith – From Vision Through PixelSmith Into Reality",
+  title: "Srizen – From Vision Through Srizen Into Reality",
   description:
-    "PixelSmith transforms ideas into seamless digital experiences. We design and build custom websites, intuitive apps, and impactful interfaces — where every pixel matters.",
+    "Srizen transforms ideas into seamless digital experiences. We design and build custom websites, intuitive apps, and impactful interfaces — where every pixel matters.",
   keywords: [
-    "PixelSmith",
+    "Srizen",
     "web development agency",
     "React development",
     "Next.js websites",
@@ -28,17 +28,17 @@ export const metadata: Metadata = {
     "digital experiences",
   ],
   openGraph: {
-    title: "PixelSmith – Crafting Seamless Digital Experiences",
+    title: "Srizen – Crafting Seamless Digital Experiences",
     description:
-      "From startups to growing businesses, PixelSmith builds websites, apps, and experiences that captivate users and deliver measurable impact.",
-    url: "https://builtby-pixel-smith.vercel.app", // update with your real domain
-    siteName: "PixelSmith",
+      "From startups to growing businesses, Srizen builds websites, apps, and experiences that captivate users and deliver measurable impact.",
+    url: "https://srizen.com", // update with your real domain
+    siteName: "Srizen",
     images: [
       {
         url: "/og-image.png", // place an image in /public for OG
         width: 1200,
         height: 630,
-        alt: "PixelSmith Web Development & Design",
+        alt: "Srizen Web Development & Design",
       },
     ],
     locale: "en_US",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "PixelSmith – Web Development & Design Agency",
+    title: "Srizen – Web Development & Design Agency",
     description:
       "We design and build custom websites, mobile apps, and seamless digital products that deliver impact.",
     images: ["/og-image.png"],
@@ -79,7 +79,7 @@ const Home = () => {
       link: "/showcase/pranavsoni-portfolio",
     },
     {
-      title: "Pixelsmith Creative Studio",
+      title: "Srizen Creative Studio",
       description: "Brand design & digital presence revamp.",
       image:
         "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
@@ -168,23 +168,23 @@ const Home = () => {
                 borderRadius="10px"
                 className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full capitalize"
               >
-                PixelSmith
+                Srizen
               </MovingBorderStyle> */}
                 <PointerHighlight
                   containerClassName="inline-block mr-1"
                   rectangleClassName="bg-main/60"
                   pointerClassName="text-main"
                 >
-                  <span className="relative px-4 z-40">PixelSmith</span>
+                  <span className="relative px-4 z-40">Srizen</span>
                 </PointerHighlight>
                 {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
-                PixelSmith
+                Srizen
               </span>{" "} */}
                 Into Reality
               </h1>
               <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
                 We design digital experiences where every interaction feels
-                seamless. From custom interfaces to powerful apps, PixelSmith
+                seamless. From custom interfaces to powerful apps, Srizen
                 shapes products that captivate users and deliver impact
               </p>
               <GetInTouchButton

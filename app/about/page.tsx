@@ -9,19 +9,19 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "At PixelSmith, we forge digital experiences pixel by pixel. Learn about our values, vision, and passion for creating user-focused websites and applications that blend creativity with performance.",
+    "At Srizen, we forge digital experiences pixel by pixel. Learn about our values, vision, and passion for creating user-focused websites and applications that blend creativity with performance.",
   openGraph: {
-    title: "About Us | PixelSmith",
+    title: "About Us | Srizen",
     description:
-      "Discover the story behind PixelSmith — a creative studio dedicated to building seamless, functional, and beautifully designed digital experiences.",
-    url: "https://builtby-pixel-smith.vercel.app/about",
-    siteName: "PixelSmith",
+      "Discover the story behind Srizen — a creative studio dedicated to building seamless, functional, and beautifully designed digital experiences.",
+    url: "https://srizen/about",
+    siteName: "Srizen",
     images: [
       {
         url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1080&auto=format&fit=crop",
         width: 1200,
         height: 630,
-        alt: "PixelSmith - About Us",
+        alt: "Srizen - About Us",
       },
     ],
     locale: "en_US",
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Us | PixelSmith",
+    title: "About Us | Srizen",
     description:
-      "PixelSmith crafts user-first digital products — blending creativity, design, and technology to deliver seamless experiences.",
+      "Srizen crafts user-first digital products — blending creativity, design, and technology to deliver seamless experiences.",
     images: [
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1080&auto=format&fit=crop",
     ],
@@ -62,7 +62,7 @@ const About = () => {
         </div>
         <Container className="bg-secondaryy-background">
           <p className="mt-4 mb-10 text-base sm:text-lg md:text-xl text-foreground/70 max-w-4xl mx-auto text-center">
-            At Pixel Smith, we believe technology should feel effortless. Every
+            At Srizen, we believe technology should feel effortless. Every
             click, every interaction, every pixel matters. We craft engaging,
             reliable, and safe digital experiences that blend design precision
             with engineering excellence
@@ -139,9 +139,10 @@ const About = () => {
                   interfaces.
                 </p>
                 <p className="mt-4 text-base sm:text-lg text-foreground/80 leading-relaxed">
-                  <span className="font-bold italic">PixelSmith</span> was born
-                  out of the belief that users deserve better. My mission is
-                  simple: design and build products where{" "}
+                  <span className="font-bold italic">Srizen</span> — inspired by
+                  the Sanskrit word <span className="font-bold">"Srijan"</span>, meaning creation & innovation —
+                  was born out of the belief that users deserve better. My
+                  mission is simple: design and build products where{" "}
                   <span className="font-semibold underline">
                     end-user experience comes first
                   </span>

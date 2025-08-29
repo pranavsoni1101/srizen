@@ -87,8 +87,10 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-100">
       {/* Navigation Menu */}
-      <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
-        <div className="text-xl font-heading font-bold text-text">PixleSmith</div>
+      <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none cursor-pointer">
+        <Link href="/" passHref legacyBehavior>
+          <div className="text-xl font-heading font-bold text-text">Srizen</div>
+        </Link>
         <NavigationMenuList>
           {/* Home */}
           <NavigationMenuItem>
@@ -138,8 +140,8 @@ export default function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
         <div>
-          <GetInTouchButton 
-            text={"Schedule a Call"} 
+          <GetInTouchButton
+            text={"Schedule a Call"}
             icon={<Calendar />}
             className="mr-3"
           />
@@ -151,14 +153,14 @@ export default function Navbar() {
       <div className="md:hidden bg-secondary-background border-b-4 border-border">
         <div className="flex items-center justify-between px-6 py-4">
           <div className="text-xl font-heading font-bold text-foreground">
-            PixleSmith
+            Srizen
           </div>
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
-            <Button 
+            <Button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="p-2"
-              >
+            >
               <Hamburger />
             </Button>
           </div>

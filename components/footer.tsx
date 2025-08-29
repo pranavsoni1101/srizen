@@ -10,7 +10,7 @@ export default function Footer() {
         
         {/* Brand */}
         <div>
-          <h3 className="text-2xl font-bold">Pixelsmith ✦</h3>
+          <h3 className="text-2xl font-bold">Srizen ✦</h3>
           <p className="mt-2 text-sm text-muted-foreground">
             Crafting bold digital experiences with a dash of creativity.
           </p>
@@ -35,10 +35,10 @@ export default function Footer() {
         {/* Contact / Socials */}
         <div className="space-y-2">
           <a
-            href="mailto:hello@pixelsmith.com"
+            href="mailto:hello@srizen.com"
             className="block hover:underline hover:underline-offset-4 decoration-main transition"
           >
-            hello@pixelsmith.com
+            hello@srizen.com
           </a>
           <div className="flex gap-4 mt-2">
             <a
@@ -73,7 +73,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-black/80 py-4 border-t-4 border-border bg-main">
-        © {new Date().getFullYear()} Pixelsmith. All rights reserved.
+        © {new Date().getFullYear()} Srizen. All rights reserved.
       </div>
     </footer>
   );

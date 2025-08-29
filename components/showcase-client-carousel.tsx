@@ -41,7 +41,7 @@ const ShowcaseClientCarousel = () => {
           title: "Compliance Management App 2",
           description: "Automated compliance tracking with t.",
           image:
-            "https://images.unsplash.com/photo-1507146426996-ef05306b995a?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+            "/image.png",
           link: "#",
         },
         {
