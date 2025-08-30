@@ -117,6 +117,8 @@
   --sidebar-accent-foreground: oklch(0.21 0.006 285.885);
   --sidebar-border: oklch(0.92 0.004 286.32);
   --sidebar-ring: oklch(0.705 0.015 286.067);
+  --font-archivo-black: var(--font-archivo-black);
+  --font-ibm-plex-sans: var(--font-ibm-plex-sans);
 }
 
 .dark {
@@ -151,6 +153,8 @@
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.552 0.016 285.938);
+  --font-archivo-black: var(--font-archivo-black);
+  --font-ibm-plex-sans: var(--font-ibm-plex-sans);
 }
 
 @layer base {
@@ -230,10 +234,12 @@
 @layer base {
   body {
     @apply text-foreground font-base bg-background;
+    font-family: var(--font-ibm-plex-sans);
   }
 
   h1, h2, h3, h4, h5, h6{
     @apply font-heading;
+    font-family: var(--font-archivo-black);
   }
 }
 ::-webkit-scrollbar {
@@ -244,7 +250,6 @@
   ::-webkit-scrollbar-track {
     background: var(--secondary-background);
     border-left: 4px solid var(--border);
-    border-right: 4px solid var(--border);
   }
 
   ::-webkit-scrollbar-thumb {
@@ -257,13 +262,14 @@
   /* Dark mode specific adjustments */
   .dark ::-webkit-scrollbar-track {
     background: var(--secondary-background);
-    border-left: 4px solid var(--ring);
-    border-right: 4px solid var(--ring);
+    border-left: 4px solid var(--border);
   }
 
   .dark ::-webkit-scrollbar-thumb {
     background: var(--ring);
     border: 2px solid var(--border);
+    border-radius: 0;
+
   }
 
   .bag-grid {
