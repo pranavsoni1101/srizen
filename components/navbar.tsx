@@ -71,7 +71,7 @@ function ListItem({
           )}
           {...props}
         >
-          <div className="text-base leading-none">{title}</div>
+          <h6 className="text-base leading-none">{title}</h6>
           <p className="font-base line-clamp-2 text-sm leading-snug">
             {children}
           </p>
@@ -87,9 +87,11 @@ export default function Navbar() {
   return (
     <div className="sticky top-0 z-100">
       {/* Navigation Menu */}
-      <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none cursor-pointer">
+      <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
         <Link href="/" passHref legacyBehavior>
-          <div className="text-xl font-heading font-bold text-text">Srizen</div>
+          <h3 className="text-xl font-heading font-bold text-text  cursor-pointer">
+            Srizen
+          </h3>
         </Link>
         <NavigationMenuList>
           {/* Home */}

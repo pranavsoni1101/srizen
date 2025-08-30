@@ -159,7 +159,7 @@ const Home = () => {
             <div className="text-center">
               <h1
                 className="scroll-m-20 
-             text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22  
+             text-4xl/12 sm:text-5xl/14 md:text-6xl/18 lg:text-7xl/22  
              font-bold tracking-tight 
              max-w-4xl mx-auto text-balance"
               >

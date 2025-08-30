@@ -1,18 +1,24 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Archivo_Black, IBM_Plex_Sans} from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Define the primary font for headlines
+const archivoBlack = Archivo_Black({
+  weight: '400',
   subsets: ["latin"],
+  display: 'swap',
+  variable: "--font-archivo-black",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+// Define the secondary font for body text
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ["400", "700"],
   subsets: ["latin"],
+  display: 'swap',
+  variable: "--font-ibm-plex-sans",
 });
 
 // app/layout.tsx
@@ -68,7 +74,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibmPlexSans.variable} ${archivoBlack.variable} antialiased`}
       >
         <ThemeProvider
           attribute="class"
