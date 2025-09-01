@@ -2,15 +2,19 @@
 
 import Link from "next/link";
 import { Twitter, Linkedin, Instagram } from "lucide-react";
-
+import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="border-t-4 border-border">
       <div className="p-10 grid grid-cols-1 md:grid-cols-3 gap-8 bg-background">
-        
         {/* Brand */}
         <div>
-          <h3 className="text-2xl font-bold">Srizen ✦</h3>
+          <Image
+            src="/srizen.svg" // path from public folder
+            alt="Srizen Logo"
+            width={120} // desired width
+            height={40} // desired height
+          />
           <p className="mt-2 text-sm text-muted-foreground">
             Crafting bold digital experiences with a dash of creativity.
           </p>
@@ -19,16 +23,18 @@ export default function Footer() {
         {/* Navigation */}
         <div>
           <ul className="space-y-2">
-            {["Home", "Services", "Process", "Showcase", "Contact"].map((item) => (
-              <li key={item}>
-                <Link
-                  href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
-                  className="hover:underline hover:underline-offset-4 decoration-main transition"
-                >
-                  {item}
-                </Link>
-              </li>
-            ))}
+            {["Home", "Services", "Process", "Showcase", "Contact"].map(
+              (item) => (
+                <li key={item}>
+                  <Link
+                    href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
+                    className="hover:underline hover:underline-offset-4 decoration-main transition"
+                  >
+                    {item}
+                  </Link>
+                </li>
+              )
+            )}
           </ul>
         </div>
 

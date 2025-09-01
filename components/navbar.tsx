@@ -18,7 +18,7 @@ import { ThemeSwitcher } from "./theme-switcher";
 import { Button } from "./ui/button";
 import { Calendar, Hamburger } from "lucide-react";
 import GetInTouchButton from "./contact-button";
-
+import Image from "next/image";
 const showcaseItems = [
   {
     title: "Pranav Soni Portfolio",
@@ -89,9 +89,12 @@ export default function Navbar() {
       {/* Navigation Menu */}
       <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
         <Link href="/" passHref legacyBehavior>
-          <h3 className="text-xl font-heading font-bold text-text  cursor-pointer">
-            Srizen
-          </h3>
+          <Image
+            src="/srizen.svg" // path from public folder
+            alt="Srizen Logo"
+            width={120} // desired width
+            height={40} // desired height
+          />
         </Link>
         <NavigationMenuList>
           {/* Home */}
@@ -142,11 +145,13 @@ export default function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
         <div>
-          <GetInTouchButton
-            text={"Schedule a Call"}
-            icon={<Calendar />}
-            className="mr-3"
-          />
+          <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
+            <GetInTouchButton
+              text={"Schedule a Call"}
+              icon={<Calendar />}
+              className="mr-3"
+            />
+          </Link>
           <ThemeSwitcher />
         </div>
       </NavigationMenu>

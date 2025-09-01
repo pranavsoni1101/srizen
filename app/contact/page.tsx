@@ -12,6 +12,7 @@ import {
   Twitter,
   Instagram,
 } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact Us",
@@ -149,7 +150,6 @@ export default function Contact() {
                         Twitter
                       </a>
                     </div>
-
                   </CardContent>
                 </Card>
               </div>
@@ -164,16 +164,18 @@ export default function Contact() {
             Ready to forge your vision to life?
           </h2>
           <p className="text-black/70 sm:text-lg max-w-2xl mx-auto mb-8">
-            Whether it’s crafting pixel-perfect interfaces or building scalable
-            systems — let’s create something remarkable together.
+            Whether it&apos;s crafting pixel-perfect interfaces or building scalable
+            systems — let&apos;s create something remarkable together.
           </p>
-          <Button
-            size="lg"
-            className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
-          >
-            Let&apos;s Build Something Together
-            <Hammer className="h-8 w-8" />
-          </Button>
+          <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
+            <Button
+              size="lg"
+              className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
+            >
+              Claim Your Free Consultation
+              <Hammer className="h-8 w-8" />
+            </Button>
+          </Link>
         </Container>
       </section>
     </>
