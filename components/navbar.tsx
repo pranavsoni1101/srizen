@@ -90,7 +90,7 @@ export default function Navbar() {
       <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
         <Link href="/" passHref legacyBehavior>
           <Image
-            src="/srizen.svg" // path from public folder
+            src="/logo.svg" // path from public folder
             alt="Srizen Logo"
             width={120} // desired width
             height={40} // desired height
