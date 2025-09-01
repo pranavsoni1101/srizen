@@ -10,7 +10,7 @@ export default function Footer() {
         {/* Brand */}
         <div>
           <Image
-            src="/srizen.svg" // path from public folder
+            src="/logo.svg" // path from public folder
             alt="Srizen Logo"
             width={120} // desired width
             height={40} // desired height

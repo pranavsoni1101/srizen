@@ -164,8 +164,8 @@ export default function Contact() {
             Ready to forge your vision to life?
           </h2>
           <p className="text-black/70 sm:text-lg max-w-2xl mx-auto mb-8">
-            Whether it&apos;s crafting pixel-perfect interfaces or building scalable
-            systems — let&apos;s create something remarkable together.
+            Whether it&apos;s crafting pixel-perfect interfaces or building
+            scalable systems — let&apos;s create something remarkable together.
           </p>
           <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
             <Button
