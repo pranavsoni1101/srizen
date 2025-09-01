@@ -10,6 +10,7 @@ import TestimonialCard from "@/components/testimonial-card";
 import ContactForm from "@/components/contact-form";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Srizen – From Vision Through Srizen Into Reality",
@@ -184,14 +185,16 @@ const Home = () => {
               </h1>
               <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
                 We design digital experiences where every interaction feels
-                seamless. From custom interfaces to powerful apps, Srizen
-                shapes products that captivate users and deliver impact
+                seamless. From custom interfaces to powerful apps, Srizen shapes
+                products that captivate users and deliver impact
               </p>
-              <GetInTouchButton
-                text="Design my Experience"
-                className="mt-4"
-                icon={<ArrowUpRight className="w-5 h-5" />}
-              />
+              <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
+                <GetInTouchButton
+                  text="Design my Experience"
+                  className="mt-4"
+                  icon={<ArrowUpRight className="w-5 h-5" />}
+                />
+              </Link>
             </div>
           </section>
         </Container>

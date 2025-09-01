@@ -2,6 +2,9 @@ import { Container } from "@/components/container";
 import { FlipWords } from "@/components/ui/flip-words";
 import type { Metadata } from "next";
 import ShowcaseClientCarousel from "@/components/showcase-client-carousel";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { Hammer } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Showcase",
@@ -59,9 +62,31 @@ const Showcase = () => {
         <Container>
           <blockquote className="mt-6 mb-12 border-l-2 pl-6 italic mx-auto max-w-lg">
             Design, technology, and storytelling come together here. See how
-            we’ve shaped brands and built products that stand out
+            we&apos;ve shaped brands and built products that stand out
           </blockquote>
           <ShowcaseClientCarousel />
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bag-grid bg-main text-main-foreground py-16 border-border border-t-4 ">
+        <Container className="text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+            Ready to bring your vision to life?
+          </h2>
+          <p className="text-black/70 sm:text-lg max-w-2xl mx-auto mb-8">
+            Whether it&apos;s crafting pixel-perfect interfaces or building scalable
+            systems — let&apos;s create something remarkable together.
+          </p>
+          <Link href="/contact" passHref>
+            <Button
+              size="lg"
+              className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
+            >
+              Let&apos;s Build Something Together
+              <Hammer className="h-8 w-8" />
+            </Button>
+          </Link>
         </Container>
       </section>
     </>

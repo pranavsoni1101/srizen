@@ -5,6 +5,7 @@ import { Code, Hammer, Paintbrush, Shield, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { FlipWords } from "@/components/ui/flip-words";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -140,9 +141,10 @@ const About = () => {
                 </p>
                 <p className="mt-4 text-base sm:text-lg text-foreground/80 leading-relaxed">
                   <span className="font-bold italic">Srizen</span> — inspired by
-                  the Sanskrit word <span className="font-bold">"Srijan"</span>, meaning creation & innovation —
-                  was born out of the belief that users deserve better. My
-                  mission is simple: design and build products where{" "}
+                  the Sanskrit word <span className="font-bold">"Srijan"</span>,
+                  meaning creation & innovation — was born out of the belief
+                  that users deserve better. My mission is simple: design and
+                  build products where{" "}
                   <span className="font-semibold underline">
                     end-user experience comes first
                   </span>
@@ -169,16 +171,18 @@ const About = () => {
             Ready to bring your vision to life?
           </h2>
           <p className="text-black/70 sm:text-lg max-w-2xl mx-auto mb-8">
-            Whether it’s crafting pixel-perfect interfaces or building scalable
-            systems — let’s create something remarkable together.
+            Whether it&apos;s crafting pixel-perfect interfaces or building scalable
+            systems — let&apos;s create something remarkable together.
           </p>
-          <Button
-            size="lg"
-            className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
-          >
-            Let&apos;s Build Something Together
-            <Hammer className="h-8 w-8" />
-          </Button>
+          <Link href="/contact" passHref>
+            <Button
+              size="lg"
+              className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
+            >
+              Let&apos;s Build Something Together
+              <Hammer className="h-8 w-8" />
+            </Button>
+          </Link>
         </Container>
       </section>
     </>

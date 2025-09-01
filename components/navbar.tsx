@@ -145,11 +145,13 @@ export default function Navbar() {
           </NavigationMenuItem>
         </NavigationMenuList>
         <div>
-          <GetInTouchButton
-            text={"Schedule a Call"}
-            icon={<Calendar />}
-            className="mr-3"
-          />
+          <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
+            <GetInTouchButton
+              text={"Schedule a Call"}
+              icon={<Calendar />}
+              className="mr-3"
+            />
+          </Link>
           <ThemeSwitcher />
         </div>
       </NavigationMenu>
