@@ -123,8 +123,8 @@ export default function Contact() {
 
                     <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5" />
-                      <a href="tel:+919876543210" className="hover:underline">
-                        +91 98765 43210
+                      <a href="tel:+917588255113" className="hover:underline">
+                        +91 75882 55113
                       </a>
                     </div>
                   </CardContent>
