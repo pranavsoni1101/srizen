@@ -159,9 +159,14 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <div className="md:hidden bg-secondary-background border-b-4 border-border">
         <div className="flex items-center justify-between px-6 py-4">
-          <div className="text-xl font-heading font-bold text-foreground">
-            Srizen
-          </div>
+          <Link href="/" passHref legacyBehavior>
+            <Image
+              src="/logo.svg" // path from public folder
+              alt="Srizen Logo"
+              width={120} // desired width
+              height={40} // desired height
+            />
+          </Link>
           <div className="flex items-center gap-2">
             <ThemeSwitcher />
             <Button

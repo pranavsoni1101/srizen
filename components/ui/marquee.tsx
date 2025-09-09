@@ -1,4 +1,6 @@
-export  function Marquee({ items }: { items: string[] }) {
+import { ReactNode } from "react"
+
+export  function Marquee({ items }: { items: (string | ReactNode)[] }) {
   return (
     <div className="relative flex w-full overflow-x-hidden border-b-2 border-border bg-main text-black/65 font-base">
       <div className="animate-marquee whitespace-nowrap py-6">
@@ -26,7 +28,7 @@ export  function Marquee({ items }: { items: string[] }) {
   )
 };
 
-export  function ReverseMarquee({ items }: { items: string[] }) {
+export  function ReverseMarquee({ items }: { items: (string | ReactNode)[] }) {
   return (
     <div className="relative flex w-full overflow-x-hidden border-b-2 border-t-2 border-border bg-main text-black/65 font-base">
       <div className="animate-reverse-marquee whitespace-nowrap py-6">
