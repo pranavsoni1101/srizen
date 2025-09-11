@@ -27,10 +27,10 @@ const showcaseItems = [
       "A modern portfolio built with Next.js, deployed on Vercel, showcasing an eye for UI detailing.",
   },
   {
-    title: "Mobile Apps",
-    href: "/showcase/mobile",
+    title: "AiM – Ascent Industrial Manufacturers",
+    href: "/showcase/ascent-industrial-manufacturers",
     description:
-      "Native and cross-platform mobile applications that users love.",
+      "Revamped Next.js site with better SEO to be deploed on vercel, performance & UI consistency.",
   },
   {
     title: "Brand Identity",

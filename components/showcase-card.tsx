@@ -16,6 +16,7 @@ interface ShowcaseCardProps {
   description: string;
   image?: string;
   link?: string;
+  comingSoon?: boolean;
 }
 
 const ShowcaseCard = ({
@@ -23,6 +24,7 @@ const ShowcaseCard = ({
   description,
   image,
   link,
+  comingSoon
 }: ShowcaseCardProps) => {
   return (
     <>
@@ -33,14 +35,18 @@ const ShowcaseCard = ({
         </CardHeader>
         <CardContent>
           <div className="h-40 bg-muted-foreground/20 flex items-center justify-center rounded-lg">
-            {image ? (
+            {image && !comingSoon ? (
               <img
                 src={image}
                 alt={title}
                 className="object-cover w-full h-full rounded-lg"
               />
             ) : (
-              <span>No Image</span>
+              <div className="flex items-center justify-center h-full w-full  rounded-base dark bg-background">
+              <span className="text-2xl font-semibold text-foreground/70">
+                🚀 Coming Soon
+              </span>
+            </div>
             )}
           </div>
         </CardContent>
@@ -51,14 +57,6 @@ const ShowcaseCard = ({
                     View Case Study →
                 </Button>
             </Link>
-            {/* <a
-              href={link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className=" font-medium hover:underline"
-            >
-              View Case Study →
-            </a> */}
           </CardFooter>
         )}
       </Card>

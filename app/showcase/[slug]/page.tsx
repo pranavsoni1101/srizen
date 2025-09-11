@@ -40,13 +40,21 @@ export default async function ProjectPage({
       <Container size="md">
         {/* Hero section */}
         <div className="mb-10">
-          <Image
-            src={project.image}
-            alt={project.title}
-            width={1200}
-            height={600}
-            className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover w-full h-[400px]"
-          />
+          {project.comingSoon ? (
+            <div className="dark flex items-center justify-center w-full h-[400px] rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 bg-muted">
+              <h1 className="text-2xl font-semibold text-foreground/70">
+                🚀 Coming Soon
+              </h1>
+            </div>
+          ) : (
+            <Image
+              src={project.image}
+              alt={project.title}
+              width={1200}
+              height={600}
+              className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover w-full h-[400px]"
+            />
+          )}
           <h1 className="text-3xl font-bold mt-6">{project.title}</h1>
           <p className="text-foreground/70 mt-2">{project.description}</p>
 
@@ -96,19 +104,23 @@ export default async function ProjectPage({
             </div>
           </section>
 
-          <h2 className="text-xl font-semibold">Screenshots</h2>
-          <div className="grid md:grid-cols-2 gap-4 mt-4">
-            {project.details.screenshots.map((src, i) => (
-              <div key={i} className="relative w-full aspect-[16/9]">
-                <Image
-                  src={src}
-                  alt={`${project.title} screenshot ${i + 1}`}
-                  fill
-                  className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover"
-                />
+          {!project.comingSoon && (
+            <>
+              <h2 className="text-xl font-semibold">Screenshots</h2>
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                {project.details.screenshots.map((src, i) => (
+                  <div key={i} className="relative w-full aspect-[16/9]">
+                    <Image
+                      src={src}
+                      alt={`${project.title} screenshot ${i + 1}`}
+                      fill
+                      className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover"
+                    />
+                  </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </>
+          )}
         </div>
       </Container>
     </section>
