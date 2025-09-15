@@ -9,26 +9,30 @@ import {
   CardFooter,
 } from "@/components/ui/card";
 
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+
 interface TestimonialCardProps {
   name: string;
   role: string;
-  image: string;
   testimonial: string;
 }
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   name,
   role,
-  image,
   testimonial,
 }) => (
   <Card className="border-2 border-border bg-background rounded-base shadow-shadow mb-8 text-foreground">
     <CardHeader className="flex items-center gap-4">
-      <img
-        src={image}
-        alt={`${name}'s profile`}
-        className="w-12 h-12 rounded-base border-2 border-border"
-      />
+      <Avatar className="w-12 h-12 border-2 border-border rounded-lg">
+        <AvatarFallback className="bg-main text-black font-bold rounded-lg">
+          {name
+            .split(" ")
+            .map((n) => n[0])
+            .join("")
+            .toUpperCase()}
+        </AvatarFallback>
+      </Avatar>
       <div>
         <h4 className="text-lg font-heading">{name}</h4>
         <p className="text-sm text-foreground/70">{role}</p>
