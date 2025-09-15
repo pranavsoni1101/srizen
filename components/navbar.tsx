@@ -27,10 +27,10 @@ const showcaseItems = [
       "A modern portfolio built with Next.js, deployed on Vercel, showcasing an eye for UI detailing.",
   },
   {
-    title: "Mobile Apps",
-    href: "/showcase/mobile",
+    title: "AiM – Ascent Industrial Manufacturers",
+    href: "/showcase/ascent-industrial-manufacturers",
     description:
-      "Native and cross-platform mobile applications that users love.",
+      "Revamped Next.js site with better SEO to be deploed on vercel, performance & UI consistency.",
   },
   {
     title: "Brand Identity",
@@ -180,24 +180,31 @@ export default function Navbar() {
 
         {isMobileMenuOpen && (
           <div className="px-6 pb-4 space-y-2">
-            <Link href="/" className="block py-2 text-foreground font-heading">
+            <Link 
+              href="/" 
+              className="block py-2 text-foreground font-heading"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               Home
             </Link>
             <Link
               href="/about"
               className="block py-2 text-foreground font-heading"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               About Us
             </Link>
             <Link
               href="/showcase"
               className="block py-2 text-foreground font-heading"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Showcase
             </Link>
             <Link
               href="/contact"
               className="block py-2 text-foreground font-heading"
+              onClick={() => setIsMobileMenuOpen(false)}
             >
               Contact Us
             </Link>

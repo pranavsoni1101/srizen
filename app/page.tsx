@@ -76,15 +76,16 @@ const Home = () => {
       title: "Pranav Soni Portfolio",
       description:
         "A personal portfolio built with Next.js and deployed on Vercel, showcasing eye for UI detail and responsiveness.",
-      image: "pranav-soni-portfolio.png",
+      image: "/pranav-soni-portfolio.png",
       link: "/showcase/pranavsoni-portfolio",
     },
     {
-      title: "Srizen Creative Studio",
-      description: "Brand design & digital presence revamp.",
-      image:
-        "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
-      link: "https://example.com",
+      title: "AiM – Ascent Industrial Manufacturers",
+      description:
+        "Revamped Next.js site with better SEO to be deploed on vercel, performance & UI consistency. (Coming Soon 🚀)",
+      image: "/aim-coming-soon.png", // placeholder or real logo
+      link: "/showcase/ascent-industrial-manufacturers",
+      comingSoon: true,
     },
     {
       title: "ERP SaaS MVP",
@@ -92,6 +93,7 @@ const Home = () => {
       image:
         "https://images.pexels.com/photos/6538918/pexels-photo-6538918.jpeg",
       link: "https://example.com",
+      comingSoon: true,
     },
     {
       title: "Healthcare Data Annotation",
