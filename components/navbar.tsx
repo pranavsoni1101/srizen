@@ -32,27 +32,6 @@ const showcaseItems = [
     description:
       "Revamped Next.js site with better SEO to be deploed on vercel, performance & UI consistency.",
   },
-  {
-    title: "Brand Identity",
-    href: "/showcase/branding",
-    description: "Complete brand systems that tell compelling stories.",
-  },
-  {
-    title: "UI/UX Design",
-    href: "/showcase/uiux",
-    description: "User experiences that are both beautiful and functional.",
-  },
-  {
-    title: "E-commerce",
-    href: "/showcase/ecommerce",
-    description: "Online stores that maximize sales and customer satisfaction.",
-  },
-  {
-    title: "Digital Marketing",
-    href: "/showcase/marketing",
-    description:
-      "Campaigns that reach audiences and deliver measurable results.",
-  },
 ];
 
 function ListItem({
