@@ -47,13 +47,25 @@ export default async function ProjectPage({
               </h1>
             </div>
           ) : (
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={1200}
-              height={600}
-              className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover w-full h-[400px]"
-            />
+            // <Image
+            //   src={project.image}
+            //   alt={project.title}
+            //   width={1200}
+            //   height={600}
+            //   className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover w-full h-[400px]"
+            // />
+            <video
+  autoPlay
+  loop
+  muted
+  playsInline
+  className="rounded-base border-border border-b-5 border-r-5 border-t-1 border-l-1 object-cover w-full h-[400px]"
+>
+  <source
+    src="/pranav_soni-portfolio-walkthrough.mp4"
+    type="video/mp4"
+  />
+</video>
           )}
           <h1 className="text-3xl font-bold mt-6">{project.title}</h1>
           <p className="text-foreground/70 mt-2">{project.description}</p>

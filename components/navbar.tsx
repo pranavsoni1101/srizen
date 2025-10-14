@@ -34,6 +34,28 @@ const showcaseItems = [
   },
 ];
 
+export const caseStudyItems = [
+  {
+    title: "Why Website Speed Impacts Business Performance",
+    href: "/srizen-effect/website-load-times",
+    description:
+      "How reducing load time from 7s to 2s improved engagement and boosted conversions.",
+  },
+  {
+    title: "5 Common UI/UX Mistakes That Kill Conversions",
+    href: "/srizen-effect/ui-ux-mistakes",
+    description:
+      "Exploring how cluttered layouts, weak CTAs, and poor navigation silently cost businesses growth.",
+  },
+  {
+    title: "How SMEs Miss Out Without Proper SEO",
+    href: "/srizen-effect/seo-missed-opportunities",
+    description:
+      "Breaking down how poor SEO structures keep businesses invisible and how Srizen fixes it.",
+  },
+];
+
+
 function ListItem({
   className,
   title,
@@ -102,6 +124,25 @@ export default function Navbar() {
             <NavigationMenuContent>
               <ul className="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
                 {showcaseItems.map((item) => (
+                  <ListItem
+                    key={item.title}
+                    title={item.title}
+                    href={item.href}
+                  >
+                    {item.description}
+                  </ListItem>
+                ))}
+              </ul>
+            </NavigationMenuContent>
+          </NavigationMenuItem>
+
+          <NavigationMenuItem>
+            <Link href="/srizen-effect" passHref>
+              <NavigationMenuTrigger>Srizen Effect</NavigationMenuTrigger>
+            </Link>
+            <NavigationMenuContent>
+              <ul className="grid w-[400px] gap-3 p-2 md:w-[500px] md:grid-cols-2 lg:w-[600px]">
+                {caseStudyItems.map((item) => (
                   <ListItem
                     key={item.title}
                     title={item.title}
