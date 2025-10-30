@@ -23,11 +23,11 @@ export default function Footer() {
         {/* Navigation */}
         <div>
           <ul className="space-y-2">
-            {["Home", "Services", "Process", "Showcase", "Contact"].map(
+            {["Home","About", "Showcase", "Contact"].map(
               (item) => (
                 <li key={item}>
                   <Link
-                    href={item === "Home" ? "/" : `#${item.toLowerCase()}`}
+                    href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                     className="hover:underline hover:underline-offset-4 decoration-main transition"
                   >
                     {item}
@@ -57,7 +57,7 @@ export default function Footer() {
               <Twitter className="w-5 h-5" />
             </a>
             <a
-              href="https://linkedin.com/"
+              href="https://www.linkedin.com/company/srizen"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
