@@ -1,9 +1,9 @@
 import { Marquee, ReverseMarquee } from "@/components/ui/marquee";
 import { Briefcase } from "lucide-react";
 // const items = [
-//   "AiM",
+//   "Ascent Industrial Manufacturers",
 //   <Briefcase  className="inline-block h-8 w-8" strokeWidth={2}/>,
-//   "More Associations soon",
+//   "ResplenDent Orthodontics",
 //   <Briefcase  className="inline-block h-8 w-8" strokeWidth={2}/>,
 //   "Item 3",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
@@ -11,7 +11,7 @@ import { Briefcase } from "lucide-react";
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
 //   "Item 5",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
-//   "AiM",
+//   "Ascent Industrial Manufacturers",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
 //   "Item 2",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
@@ -21,7 +21,7 @@ import { Briefcase } from "lucide-react";
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
 //   "Item 5",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
-//   "AiM",
+//   "Ascent Industrial Manufacturers",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
 //   "Item 2",
 //   <Briefcase className="inline-block h-8 w-8" strokeWidth={2}/>,
@@ -32,13 +32,13 @@ import { Briefcase } from "lucide-react";
 //   "Item 5",
 // ];
 const items = [
-  "AiM",
+  "Ascent Industrial Manufacturers",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
   "Zygoma AI",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
-  "More Associations Soon",
+  "ResplenDent Orthodontics",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
-  "Big Moves",
+  "More Associations Coming Soon",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
   "Next Up",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
@@ -46,13 +46,13 @@ const items = [
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
 
   
-  "AiM",
+  "Ascent Industrial Manufacturers",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
   "Zygoma AI",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
-  "More Associations Soon",
+  "ResplenDent Orthodontics",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
-  "Big Moves",
+  "More Associations Coming Soon",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
   "Next Up",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
