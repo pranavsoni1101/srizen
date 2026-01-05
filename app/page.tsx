@@ -126,6 +126,15 @@ const Home = () => {
       testimonial:
         "The Srizen team brought clarity and execution speed to our vision at Zygoma AI. Their design and development expertise helped us present complex technology in a simple, impactful way.",
     },
+
+    {
+      name: "Kriti Chaube",
+      role: "Founder, TSAR Perfumes",
+      image:
+        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1080&auto=format&fit=crop",
+      testimonial:
+        "Srizen brought clarity, structure, and performance to our storefront. From the cart experience to overall UX, every change felt intentional and impactful. The results spoke for themselves.",
+    },
   ];
 
   // Testimonial 3 - Placeholder / Future client
@@ -137,6 +146,14 @@ const Home = () => {
         "https://images.unsplash.com/photo-1502685104226-ee32379fefbe?q=80&w=1080&auto=format&fit=crop",
       testimonial:
         "The collaboration with Srizen exceeded expectations. They truly care about the user experience, and it shows in the final product.",
+    },
+    {
+      name: "Dr. Purva Soni",
+      role: "Founder Orthodontist, Resplendent Orthodontics",
+      image:
+        "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1080&auto=format&fit=crop",
+      testimonial:
+        "Working with Srizen was effortless. They understood our vision immediately and translated it into a website that feels professional, trustworthy, and patient-friendly.",
     },
   ];
 
@@ -236,9 +253,8 @@ const Home = () => {
           {showcases.map((showcase, i) => (
             <div
               key={i}
-              className={`bag-grid p-8 border-border ${
-                i % 2 === 0 ? "border-r-4 border-b-4" : "border-b-4"
-              } ${i >= showcases.length - 2 ? "border-b-0" : ""}`}
+              className={`bag-grid p-8 border-border ${i % 2 === 0 ? "border-r-4 border-b-4" : "border-b-4"
+                } ${i >= showcases.length - 2 ? "border-b-0" : ""}`}
             >
               <ShowcaseCard {...showcase} />
             </div>
