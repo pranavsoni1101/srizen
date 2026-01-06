@@ -39,7 +39,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       </div>
     </CardHeader>
     <CardContent className="mt-4 text-sm">
-      <p>"{testimonial}"</p>
+      <p>{testimonial}</p>
     </CardContent>
     <CardFooter>{/* Optional: Add a source or date */}</CardFooter>
   </Card>
