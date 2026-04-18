@@ -173,33 +173,22 @@ const Home = () => {
              font-bold tracking-tight 
              max-w-4xl mx-auto text-balance"
               >
-                From Vision Through{" "}
-                {/* <MovingBorderStyle
-                borderRadius="10px"
-                className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full capitalize"
-              >
-                Srizen
-              </MovingBorderStyle> */}
+                We Build the Internet{" "}
                 <PointerHighlight
                   containerClassName="inline-block mr-1"
                   rectangleClassName="bg-main/60"
                   pointerClassName="text-main"
                 >
-                  <span className="relative px-4 z-40">Srizen</span>
+                  <span className="relative px-4 z-40">You Deserve.</span>
                 </PointerHighlight>
-                {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
-                Srizen
-              </span>{" "} */}
-                Into Reality
               </h1>
               <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
-                We design digital experiences where every interaction feels
-                seamless. From custom interfaces to powerful apps, Srizen shapes
-                products that captivate users and deliver impact
+                Srizen builds websites, apps, and interfaces for founders who
+                care how things feel — not just how they look.
               </p>
               <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
                 <GetInTouchButton
-                  text="Design my Experience"
+                  text="Book a Call"
                   className="mt-4"
                   icon={<ArrowUpRight className="w-5 h-5" />}
                 />
