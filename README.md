@@ -1,36 +1,102 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Srizen — Creative Design & Web Development Agency
+
+The official website for **Srizen**, a premium creative studio offering custom websites, UX/UI design, and web & mobile app development. Built with Next.js 16 and React 19.
+
+---
+
+## Tech Stack
+
+| Category | Technology |
+|---|---|
+| Framework | Next.js 16 (App Router) + React 19 |
+| Language | TypeScript 5 |
+| Styling | Tailwind CSS 4 |
+| UI Components | shadcn/ui (Radix UI primitives) |
+| Animation | Framer Motion 12 |
+| Forms | React Hook Form + Zod + Formspree |
+| Carousel | Embla Carousel |
+| Fonts | Archivo Black + IBM Plex Sans |
+| Themes | next-themes (dark/light mode) |
+| Deployment | Vercel |
+
+---
+
+## Pages & Routes
+
+| Route | Description |
+|---|---|
+| `/` | Landing page — hero, services, process, showcase, testimonials, CTA |
+| `/about` | Company values, founder bio, animated flip-word section |
+| `/contact` | Contact form (Formspree), map, Calendly scheduling |
+| `/showcase` | Portfolio grid of client projects |
+| `/showcase/[slug]` | Individual project case studies |
+| `/srizen-effect` | Curated effect/highlight showcase |
+| `/srizen-effect/[slug]` | Dynamic effect detail pages |
+
+---
+
+## Project Structure
+
+```
+srizen/
+├── app/                    # Next.js App Router pages
+│   ├── layout.tsx          # Root layout (fonts, navbar, footer, theme)
+│   ├── page.tsx            # Home page
+│   ├── about/
+│   ├── contact/
+│   ├── showcase/[slug]/
+│   └── srizen-effect/[slug]/
+├── components/             # Reusable components
+│   ├── ui/                 # shadcn/ui primitives + custom animations
+│   ├── navbar.tsx
+│   ├── footer.tsx
+│   ├── contact-form.tsx
+│   ├── showcase-card.tsx
+│   ├── testimonial-card.tsx
+│   └── ...
+├── lib/
+│   ├── utils.ts            # cn() helper
+│   ├── projects.ts         # Project metadata
+│   └── caseStudies.ts      # Case study content
+└── public/                 # Static assets & OG images
+```
+
+---
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Other commands
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build    # production build
+npm run start    # start production server
+npm run lint     # run ESLint
+```
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Key Configuration
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Contact form**: Formspree — configured in [components/contact-form.tsx](components/contact-form.tsx)
+- **Calendly**: configured in contact and CTA components for consultation scheduling
+- **External images**: `images.unsplash.com` whitelisted in [next.config.ts](next.config.ts)
+- **Colors**: oklch-based CSS variables in [app/globals.css](app/globals.css) with full dark mode support
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+No `.env` file required — no secrets or API keys needed locally.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Deploy via [Vercel](https://vercel.com) — import the repo and it works out of the box with zero configuration.
+
+```bash
+npm run build   # verify build passes before pushing
+```
