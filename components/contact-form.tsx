@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -34,10 +35,14 @@ export default function ContactForm() {
   // Formspree hook
   const [state, handleSubmitFormspree] = useFormSpree("xgvlzkrn");
 
-  // Our submit handler just calls Formspree
+  useEffect(() => {
+    if (state.succeeded) {
+      form.reset();
+    }
+  }, [state.succeeded, form]);
+
   const onSubmit = (values: ContactFormValues) => {
     handleSubmitFormspree(values);
-    form.reset(); // optional: reset form after submission
   };
 
   return (
@@ -89,10 +94,10 @@ export default function ContactForm() {
             />
 
             {state.succeeded && (
-              <p className="text-green-500 text-center">Thank you! Your message has been sent.</p>
+              <p className="text-green-500 text-center">Thanks! We&apos;ll get back to you shortly.</p>
             )}
-            {state.errors && (
-              <p className="text-red-500 text-center">Oops! There was an error submitting your message.</p>
+            {state.errors && Array.isArray(state.errors) && state.errors.length > 0 && (
+              <p className="text-red-500 text-center">Something went wrong. Please try <a href="mailto:hello@srizen.com" className="underline">hello@srizen.com</a> directly.</p>
             )}
 
             <div className="text-center">

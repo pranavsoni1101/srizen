@@ -1,15 +1,18 @@
 import type { Metadata } from "next";
-import ContactForm from "@/components/contact-form";
+import ContactSection from "@/components/contact-section";
 import { Container } from "@/components/container";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Hammer, Mail, Phone } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Contact Us",
   description:
-    "Get in touch with Srizen — a remote-first design and development studio crafting pixel-perfect experiences. Whether it’s a project idea, collaboration, or just a hello, we’d love to hear from you.",
+    "Get in touch with Srizen — a remote-first design and development studio crafting pixel-perfect experiences. Whether it's a project idea, collaboration, or just a hello, we'd love to hear from you.",
   keywords: [
     "Srizen contact",
     "design studio contact",
@@ -42,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Contact Srizen",
     description:
-      "We’re remote-first and always a message away. Let’s collaborate to forge your vision into reality.",
+      "We're remote-first and always a message away. Let's collaborate to bring your vision into reality.",
     images: ["/og-image.png"],
   },
 };
@@ -59,13 +62,37 @@ const jsonLd = {
     name: "Srizen",
     url: "https://srizen.com",
     email: "hello@srizen.com",
-    telephone: "+917588255113",
-    sameAs: [
-      "https://linkedin.com/company/srizen",
-      "https://twitter.com/srizen",
-    ],
+    telephone: "+61432670014",
+    sameAs: ["https://linkedin.com/company/srizen"],
   },
 };
+
+const FAQ_ITEMS = [
+  {
+    q: "How long does a typical project take?",
+    a: "Most projects run between 4–12 weeks depending on scope. We'll give you a clear timeline after the discovery call.",
+  },
+  {
+    q: "Do you work with international clients?",
+    a: "Yes. We're remote-first and have worked with clients across India and Australia. Time zones haven't stopped us yet.",
+  },
+  {
+    q: "What does your process look like?",
+    a: "Discover → Design → Develop → Launch. We keep you in the loop at every stage with regular check-ins and transparent delivery.",
+  },
+  {
+    q: "Can I see examples of your work?",
+    a: (
+      <>
+        Absolutely —{" "}
+        <Link href="/showcase" className="underline hover:opacity-70">
+          head to our Showcase page
+        </Link>{" "}
+        or ask us to share relevant case studies on the call.
+      </>
+    ),
+  },
+];
 
 export default function Contact() {
   return (
@@ -74,6 +101,8 @@ export default function Contact() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
+      {/* Hero */}
       <section className="bg-secondary-background">
         <div className="py-6 text-center bg-background text-foreground border-border border-b-4 bag-grid">
           <Container>
@@ -84,118 +113,27 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="min-h-screen bg-secondary-background text-foreground py-20">
+      {/* Two-column contact section */}
+      <section className="bg-secondary-background text-foreground py-16 sm:py-20">
         <Container>
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="text-foreground/70 text-lg">
-              Have a project in mind? Or just want to say hello? Fill out the
-              form below and we&apos;ll get back to you soon.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-            {/* Contact Form */}
-            <div className="h-full">
-              <ContactForm />
-            </div>
-
-            {/* Info Cards */}
-            <div className="lg:mt-8 w-full my-auto space-y-6">
-              {/* First Card: Email, Phone, Address */}
-              <Card className="bg-background text-foreground max-w-full shadow-lg rounded-2xl">
-                <CardContent className="space-y-4">
-                  <div className="relative w-full max-w-md mx-auto rounded-xl overflow-hidden">
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019214456306!2d-122.41941528468126!3d37.77492977975927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b6c5bb3%3A0xcca3e7f7c9344ed7!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1692872189711!5m2!1sen!2sin"
-                      loading="lazy"
-                      title="Srizen location map"
-                      className="w-full h-full border-0"
-                    ></iframe>
-
-                    {/* Overlay */}
-                    <div className="absolute inset-0 bg-black/50 flex flex-col items-center justify-center text-center text-white px-4">
-                      <h2 className="text-2xl font-bold">
-                        We&apos;re Everywhere 🌍
-                      </h2>
-                      <p className="mt-2 text-base">
-                        Remote-first, so our{" "}
-                        <span className="font-semibold">HQ</span> is still
-                        finding its spot on the map 😉
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Second Card: Socials with Icons */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Card className="bg-main text-black max-w-full shadow-lg rounded-2xl">
-                  <CardContent className=" my-auto mx-auto p-4 space-y-4">
-                    <div className="flex items-center gap-3">
-                      <Mail className="w-5 h-5" />
-                      <a
-                        href="mailto:hello@Srizen.com"
-                        className="hover:underline"
-                      >
-                        hello@Srizen.com
-                      </a>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <Phone className="w-5 h-5" />
-                      <a href="tel:+917588255113" className="hover:underline">
-                        +91 75882 55113
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-                <Card className="bg-main text-black max-w-full shadow-lg rounded-2xl">
-                  <CardContent className="mx-auto my-auto p-12 space-y-4">
-                    <div className="flex items-center gap-3">
-                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                      <a
-                        href="https://linkedin.com/company/srizen"
-                        className="hover:underline"
-                      >
-                        LinkedIn
-                      </a>
-                    </div>
-
-                    <div className="flex items-center gap-3">
-                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.261 5.632 5.903-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                      <a
-                        href="https://twitter.com/srizen"
-                        className="hover:underline"
-                      >
-                        Twitter / X
-                      </a>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </div>
+          <ContactSection />
         </Container>
       </section>
 
-      <section className="bag-grid bg-main text-main-foreground py-16 border-border border-t-4">
-        <Container className="text-center">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Ready to forge your vision to life?
+      {/* FAQ — permanently dark */}
+      <section className="dark bg-background text-foreground border-border border-t-4 py-16 sm:py-20">
+        <Container size="lg">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8">
+            Frequently Asked Questions
           </h2>
-          <p className="text-black/70 sm:text-lg max-w-2xl mx-auto mb-8">
-            Whether it&apos;s crafting pixel-perfect interfaces or building
-            scalable systems — let&apos;s create something remarkable together.
-          </p>
-          <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
-            <Button
-              size="lg"
-              className="text-lg p-6 flex items-center gap-2 mx-auto bg-secondary text-foreground"
-            >
-              Claim Your Free Consultation
-              <Hammer className="h-8 w-8" />
-            </Button>
-          </Link>
+          <Accordion type="single" collapsible className="space-y-3">
+            {FAQ_ITEMS.map((item, i) => (
+              <AccordionItem key={i} value={`item-${i}`}>
+                <AccordionTrigger>{item.q}</AccordionTrigger>
+                <AccordionContent>{item.a}</AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </Container>
       </section>
     </>
