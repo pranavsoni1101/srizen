@@ -2,7 +2,7 @@
 
 import { ReactNode, useEffect, useRef, useState } from "react";
 
-type Props = { items: (string | ReactNode)[] };
+type Props = { items: (string | ReactNode)[]; className?: string };
 
 const PX_PER_SECOND = 90; // ✅ tweak once here (lower = slower, higher = faster)
 const MIN_SECONDS = 10;
@@ -35,11 +35,11 @@ function useAutoDuration(items: (string | ReactNode)[]) {
   return { trackRef, duration };
 }
 
-export function Marquee({ items }: Props) {
+export function Marquee({ items, className }: Props) {
   const { trackRef, duration } = useAutoDuration(items);
 
   return (
-    <div className="relative flex w-full overflow-x-hidden border-b-2 border-border bg-main text-black/65 font-base">
+    <div className={`relative flex w-full overflow-x-hidden border-b-2 border-border bg-main text-black/65 font-base${className ? ` ${className}` : ""}`}>
       <div
         ref={trackRef}
         className="animate-marquee whitespace-nowrap py-6 will-change-transform"

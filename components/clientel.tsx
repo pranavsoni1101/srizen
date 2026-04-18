@@ -18,7 +18,8 @@ const items = [
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
   "tsar Perfumes",
 
-  
+  <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
+
   "Ascent Industrial Manufacturers",
   <Briefcase className="inline-block h-8 w-8" strokeWidth={2} />,
   "Zygoma AI",
@@ -36,11 +37,11 @@ const items = [
   "tsar Perfumes",
 ];
 
-const Clientele = () => {
+const Clientele = ({ noBorderBottom }: { noBorderBottom?: boolean }) => {
   return (
     <>
       <ReverseMarquee items={items} />
-      <Marquee items={items} />
+      <Marquee items={items} className={noBorderBottom ? "border-b-0" : undefined} />
     </>
   );
 };
