@@ -3,15 +3,7 @@ import ContactForm from "@/components/contact-form";
 import { Container } from "@/components/container";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import {
-  Hammer,
-  Mail,
-  MapPin,
-  Phone,
-  Linkedin,
-  Twitter,
-  Instagram,
-} from "lucide-react";
+import { Hammer, Mail, Phone } from "lucide-react";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -26,6 +18,9 @@ export const metadata: Metadata = {
     "UI UX agency contact",
     "remote design team",
   ],
+  alternates: {
+    canonical: "https://srizen.com/contact",
+  },
   openGraph: {
     title: "Contact Srizen",
     description:
@@ -34,7 +29,7 @@ export const metadata: Metadata = {
     siteName: "Srizen",
     images: [
       {
-        url: "https://srizen.com/contact-banner.png", // (replace with your actual OG image)
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Contact Srizen",
@@ -48,18 +43,42 @@ export const metadata: Metadata = {
     title: "Contact Srizen",
     description:
       "We’re remote-first and always a message away. Let’s collaborate to forge your vision into reality.",
-    images: ["https://srizen.com/og/contact-banner.png"],
+    images: ["/og-image.png"],
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  name: "Contact Srizen",
+  url: "https://srizen.com/contact",
+  description:
+    "Get in touch with Srizen — a remote-first design and development studio.",
+  mainEntity: {
+    "@type": "Organization",
+    name: "Srizen",
+    url: "https://srizen.com",
+    email: "hello@srizen.com",
+    telephone: "+917588255113",
+    sameAs: [
+      "https://linkedin.com/company/srizen",
+      "https://twitter.com/srizen",
+    ],
   },
 };
 
 export default function Contact() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <section className="bg-secondary-background">
         <div className="py-6 text-center bg-background text-foreground border-border border-b-4 bag-grid">
           <Container>
             <h1 className="scroll-m-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl/18 font-bold tracking-tight mx-auto text-balance italic max-w-3xl">
-              Get in Touch!
+              Contact Srizen — Let&apos;s Build Together
             </h1>
           </Container>
         </div>
@@ -89,6 +108,7 @@ export default function Contact() {
                     <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019214456306!2d-122.41941528468126!3d37.77492977975927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b6c5bb3%3A0xcca3e7f7c9344ed7!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2sin!4v1692872189711!5m2!1sen!2sin"
                       loading="lazy"
+                      title="Srizen location map"
                       className="w-full h-full border-0"
                     ></iframe>
 
@@ -132,9 +152,9 @@ export default function Contact() {
                 <Card className="bg-main text-black max-w-full shadow-lg rounded-2xl">
                   <CardContent className="mx-auto my-auto p-12 space-y-4">
                     <div className="flex items-center gap-3">
-                      <Linkedin className="w-5 h-5" />
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                       <a
-                        href="https://linkedin.com/company/Srizen"
+                        href="https://linkedin.com/company/srizen"
                         className="hover:underline"
                       >
                         LinkedIn
@@ -142,12 +162,12 @@ export default function Contact() {
                     </div>
 
                     <div className="flex items-center gap-3">
-                      <Twitter className="w-5 h-5" />
+                      <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.261 5.632 5.903-5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                       <a
-                        href="https://twitter.com/Srizen"
+                        href="https://twitter.com/srizen"
                         className="hover:underline"
                       >
-                        Twitter
+                        Twitter / X
                       </a>
                     </div>
                   </CardContent>
