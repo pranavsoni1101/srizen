@@ -13,25 +13,25 @@ const ProcessSection = () => {
     {
       step: 1,
       title: "Discover",
-      desc: "We understand your goals and brainstorm ideas.",
+      desc: "We get into your world — goals, users, constraints — before a single pixel moves.",
       icon: Search,
     },
     {
       step: 2,
       title: "Design",
-      desc: "We create bold, functional, and aesthetic solutions.",
+      desc: "Bold visuals, zero decoration. Every screen earns its place.",
       icon: Palette,
     },
     {
       step: 3,
       title: "Develop",
-      desc: "We bring the design to life with clean code.",
+      desc: "Next.js. Clean code. Performance baked in — not patched on.",
       icon: Code2,
     },
     {
       step: 4,
       title: "Launch",
-      desc: "We deliver and support post-launch growth.",
+      desc: "You go live confident. We don't disappear after handoff.",
       icon: Rocket,
     },
   ];
@@ -39,7 +39,8 @@ const ProcessSection = () => {
   return (
     <div className="bag-grid py-16 border-border border-t-4">
       <Container>
-        <h2 className="text-3xl font-bold mb-10 text-center">Our Process</h2>
+        <h2 className="text-3xl font-bold mb-2 text-center">THE PROCESS</h2>
+        <p className="text-center text-muted-foreground mb-10">No guesswork. No surprises. Just a clear path from idea to live.</p>
 
         {/* Desktop Horizontal Layout */}
         <div className="hidden lg:block">

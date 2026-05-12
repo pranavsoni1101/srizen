@@ -89,31 +89,27 @@ export default function Navbar() {
     <div className="sticky top-0 z-100">
       {/* Navigation Menu */}
       <NavigationMenu className="z-50 hidden md:flex items-center justify-between px-6 py-4 w-full max-w-none">
-        <Link href="/" passHref legacyBehavior>
+        <Link href="/">
           <Image
-            src="/logo.svg" // path from public folder
+            src="/logo.svg"
             alt="Srizen Logo"
-            width={120} // desired width
-            height={40} // desired height
+            width={120}
+            height={40}
           />
         </Link>
         <NavigationMenuList>
           {/* Home */}
           <NavigationMenuItem>
-            <Link href="/" passHref legacyBehavior>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Home
-              </NavigationMenuLink>
-            </Link>
+            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <Link href="/">Home</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           {/* About Us with Dropdown */}
           <NavigationMenuItem>
-            <Link href="/about" passHref legacyBehavior>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                About Us
-              </NavigationMenuLink>
-            </Link>
+            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <Link href="/about">About Us</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
 
           {/* Showcase with Dropdown */}
@@ -157,11 +153,9 @@ export default function Navbar() {
 
           {/* Contact Us */}
           <NavigationMenuItem>
-            <Link href="/contact" passHref legacyBehavior>
-              <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                Contact Us
-              </NavigationMenuLink>
-            </Link>
+            <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+              <Link href="/contact">Contact Us</Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
         <div>
@@ -179,12 +173,12 @@ export default function Navbar() {
       {/* Mobile Navigation */}
       <div className="md:hidden bg-secondary-background border-b-4 border-border">
         <div className="flex items-center justify-between px-6 py-4">
-          <Link href="/" passHref legacyBehavior>
+          <Link href="/">
             <Image
-              src="/logo.svg" // path from public folder
+              src="/logo.svg"
               alt="Srizen Logo"
-              width={120} // desired width
-              height={40} // desired height
+              width={120}
+              height={40}
             />
           </Link>
           <div className="flex items-center gap-2">

@@ -11,6 +11,7 @@ import ContactForm from "@/components/contact-form";
 import { PointerHighlight } from "@/components/ui/pointer-highlight";
 import type { Metadata } from "next";
 import Link from "next/link";
+import StatsGrid from "@/components/stats-grid";
 
 export const metadata: Metadata = {
   title: "Srizen – From Vision Through Srizen Into Reality",
@@ -56,19 +57,22 @@ export const metadata: Metadata = {
 const Home = () => {
   const services = [
     {
-      icon: <Monitor className="inline" />,
+      icon: <Monitor size={28} />,
       title: "Custom Websites",
-      description: "Websites tailored to your brand, built for performance",
+      description:
+        "Next.js sites built fast, designed to convert, and tuned for search from day one",
     },
     {
-      icon: <Layers className="inline" />,
+      icon: <Layers size={28} />,
       title: "UX & Interface Design",
-      description: "Seamless, intuitive interfaces shaped for impact",
+      description:
+        "From first wireframe to final pixel — every screen designed with intention",
     },
     {
-      icon: <Smartphone className="inline" />,
+      icon: <Smartphone size={28} />,
       title: "Web & Mobile Apps",
-      description: "Engaging apps that perform across devices",
+      description:
+        "Cross-device apps that work beautifully from MVP to scale-ready product",
     },
   ];
   const showcases = [
@@ -169,33 +173,22 @@ const Home = () => {
              font-bold tracking-tight 
              max-w-4xl mx-auto text-balance"
               >
-                From Vision Through{" "}
-                {/* <MovingBorderStyle
-                borderRadius="10px"
-                className="inline-block bg-main text-3xl/12 sm:text-4xl/14 md:text-5xl/18 lg:text-6xl/22 text-foreground font-bold px-4 py-2 rounded-base border-1 border-gray-600 w-full capitalize"
-              >
-                Srizen
-              </MovingBorderStyle> */}
+                We Build the Internet{" "}
                 <PointerHighlight
                   containerClassName="inline-block mr-1"
                   rectangleClassName="bg-main/60"
                   pointerClassName="text-main"
                 >
-                  <span className="relative px-4 z-40">Srizen</span>
+                  <span className="relative px-4 z-40">You Deserve.</span>
                 </PointerHighlight>
-                {/* <span className="text-foreground bg-main p-2 rounded-base border-2 border-gray-400">
-                Srizen
-              </span>{" "} */}
-                Into Reality
               </h1>
               <p className="mt-6 text-base sm:text-lg md:text-xl text-foreground opacity-80 max-w-4xl mx-auto">
-                We design digital experiences where every interaction feels
-                seamless. From custom interfaces to powerful apps, Srizen shapes
-                products that captivate users and deliver impact
+                Srizen builds websites, apps, and interfaces for founders who
+                care how things feel — not just how they look.
               </p>
               <Link href="https://calendly.com/pranavsoni1101/30min" passHref>
                 <GetInTouchButton
-                  text="Design my Experience"
+                  text="Book a Call"
                   className="mt-4"
                   icon={<ArrowUpRight className="w-5 h-5" />}
                 />
@@ -207,21 +200,42 @@ const Home = () => {
       {/* Services Section */}
       <section className="py-16 bg-secondary border-border border-t-4">
         <Container>
-          <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold">Our Services</h2>
-            <p className="text-muted-foreground mt-2">
-              We craft tailored solutions to help your brand stand out
-            </p>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {services.map((service, id) => (
-              <ServicesCard
-                key={id}
-                title={service.title}
-                icon={service.icon}
-                description={service.description}
-              />
-            ))}
+          <div className="flex flex-col lg:flex-row items-center gap-12">
+            {/* Left column */}
+            <div className="w-full lg:w-[45%] flex flex-col gap-6">
+              <p className="text-xs uppercase tracking-widest text-muted-foreground font-base">
+                What We Do
+              </p>
+              <h2 className="text-4xl font-bold leading-tight">
+                We design, build, and ship digital products that don&apos;t suck.
+              </h2>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Srizen is a solo studio built on one belief — that users deserve
+                better. Every project gets the same obsessive attention to detail,
+                whether it&apos;s a startup&apos;s first site or a scaling
+                product&apos;s next phase.
+              </p>
+              {/* Stats grid */}
+              <StatsGrid />
+              {/* CTA */}
+              <p className="text-muted-foreground">
+                Not sure where to start?{" "}
+                <Link href="/contact" className="font-bold text-main underline underline-offset-2">
+                  → Let&apos;s figure it out together
+                </Link>
+              </p>
+            </div>
+            {/* Right column */}
+            <div className="w-full lg:w-[55%] flex flex-col gap-6">
+              {services.map((service, id) => (
+                <ServicesCard
+                  key={id}
+                  title={service.title}
+                  icon={service.icon}
+                  description={service.description}
+                />
+              ))}
+            </div>
           </div>
         </Container>
       </section>

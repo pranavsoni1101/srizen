@@ -12,9 +12,10 @@ const ServicesCard = ({ title, icon, description }: ServiceCardProps) => {
   return (
     <Card className="hover:scale-[1.03] transition-transform duration-300">
       <CardHeader>
-        <CardTitle> {icon} {title}</CardTitle>
+        <div className="mb-3 text-black">{icon}</div>
+        <CardTitle>{title}</CardTitle>
       </CardHeader>
-      <CardContent>{description}</CardContent>
+      <CardContent className="text-black/60">{description}</CardContent>
     </Card>
   );
 };
